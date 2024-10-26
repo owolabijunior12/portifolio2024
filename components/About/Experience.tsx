@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode, Key } from 'react'
+// import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode, Key } from 'react'
 
 const experiences = [
   {
@@ -38,9 +38,9 @@ export default function Experience() {
   return (
     <section id="experience" className="py-20  dark:bg-gray-800">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">Work Experience</h2>
-        <div className="space-y-6">
-          {experiences.map(({title,company,duration,description}, index) => (
+        <h2 className="text-3xl font-bold text-center dark:text-white mb-8">Work Experience</h2>
+        <div className="space-y-6 flex justify-center items-center w-full flex-col">
+          {experiences.map(({title,company,duration}, index) => (
             <Card key={index}>
               <CardHeader>
                 <CardTitle>{title}</CardTitle>

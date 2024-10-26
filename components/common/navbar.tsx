@@ -29,7 +29,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className=" w-screen  dark:bg-gray-800 shadow-xl">
+    <header className=" w-screen  dark:bg-gray-800 ">
       <nav className="container mx-auto px-6 py-3">
         <div className="flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold uppercase dark:text-white">

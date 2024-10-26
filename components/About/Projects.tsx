@@ -23,27 +23,6 @@ const projects = [
     image: '/',
     demo: 'https://demo2.com',
     code: 'https://github.com/username/project2',
-  },
-  {
-    title: 'Project 2',
-    description: 'A brief description of Project 2',
-    image: '/',
-    demo: 'https://demo2.com',
-    code: 'https://github.com/username/project2',
-  },
-  {
-    title: 'Project 2',
-    description: 'A brief description of Project 2',
-    image: '/',
-    demo: 'https://demo2.com',
-    code: 'https://github.com/username/project2',
-  },
-  {
-    title: 'Project 2',
-    description: 'A brief description of Project 2',
-    image: '/',
-    demo: 'https://demo2.com',
-    code: 'https://github.com/username/project2',
   },  
 ]
 
@@ -52,7 +31,7 @@ export default function Projects() {
     <section id="projects" className="py-20  dark:bg-gray-900">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">My Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 flex justify-center items-center w-full flex-col md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card key={index}>
               <CardHeader>

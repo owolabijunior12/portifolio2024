@@ -6,7 +6,7 @@ const skills = [
     return (
       <section id="skills" className="py-20  dark:bg-gray-800">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">My Skills</h2>
+          <h2 className="text-3xl font-bold text-center  dark:text-white mb-8">My Skills</h2>
           <div className="flex flex-wrap justify-center gap-4">
             {skills.map((skill, index) => (
               <span

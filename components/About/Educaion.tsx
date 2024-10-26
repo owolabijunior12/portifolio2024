@@ -18,9 +18,9 @@ const educations = [
 export default function Education() {
   return (
     <section id="education" className="py-20  dark:bg-gray-900">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">Education</h2>
-        <div className="space-y-6">
+      <div className="container mx-auto  px-6">
+        <h2 className="text-3xl font-bold text-center  dark:text-white mb-8">Education</h2>
+        <div className="space-y-6 flex justify-center items-center w-full flex-col">
           {educations.map((edu, index) => (
             <Card key={index}>
               <CardHeader>
@@ -28,7 +28,7 @@ export default function Education() {
                 <CardDescription>{edu.institution}</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 dark:text-gray-300">{edu.duration}</p>
+                <p className=" dark:text-gray-300">{edu.duration}</p>
               </CardContent>
             </Card>
           ))}
