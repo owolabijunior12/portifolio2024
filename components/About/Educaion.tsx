@@ -5,22 +5,22 @@ const educations = [
     degree: 'National Diploma in Computer Science',
     institution: 'Yaba College of Technology',
     duration: '2021 - 2023',
-    description: 'Specialized in Machine Learning and Distributed Systems.',
+    description: 'Focused on core areas of Computer Science with a specialization in Machine Learning and Distributed Systems. Gained hands-on experience in building intelligent systems, data-driven applications, and scalable architectures.'
   },
   {
-    degree: 'Bachelor of Science in Computer Science',
-    institution: 'Olabisi Onabanjo University',
-    duration: '2024 - Present',
-    // description: 'Graduated with honors. Capstone project: Developing a real-time collaboration platform.',
-  },
+    degree: 'Completion  of Frontend Web Development ',
+    institution: 'Aptlearn',
+    duration: '2022',
+    description: 'Focused on core areas of Computer Science with a specialization in Machine Learning and Distributed Systems. Gained hands-on experience in building intelligent systems, data-driven applications, and scalable architectures.'
+  }
 ]
 
 export default function Education() {
   return (
-    <section id="education" className="py-20  dark:bg-gray-900">
-      <div className="container mx-auto  px-6">
+    <section id="education" className="py-20 w-full dark:bg-gray-900">
+      <div className="container mx-auto w-full ">
         <h2 className="text-3xl font-bold text-center  dark:text-white mb-8">Education</h2>
-        <div className="space-y-6 flex justify-center items-center w-full flex-col">
+        <div className="space-y-6 flex justify-center items-center   flex-col">
           {educations.map((edu, index) => (
             <Card key={index}>
               <CardHeader>
