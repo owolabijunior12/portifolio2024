@@ -250,7 +250,7 @@ export default function Projects() {
                 {project.technologies.map((tech:any) => (
                   <span
                     key={tech}
-                    className="text-xs px-2 py-1 bg-gray-600 dark:bg-gray-700 rounded"
+                    className="flex items-center gap-1  border rounded px-3 py-1 text-sm font-medium bg-background hover:bg-accent transition-colors border-input"
                   >
                     {tech}
                   </span>

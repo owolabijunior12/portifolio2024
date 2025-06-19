@@ -23,8 +23,8 @@ export default function Page() {
         </motion.p>
       </motion.div>
       <Education />
-      <Skills />
       <Experience />
+      <Skills />
     </div>
   );
 }
