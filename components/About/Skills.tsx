@@ -121,7 +121,7 @@ const Skills = () => {
                 <div className={`w-16 h-1 bg-gradient-to-r ${category.color} mx-auto rounded-full`} />
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+              <div className=" flex flex-wrap w-auto justify-center  xl:grid-cols-6 gap-2">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill.name}
@@ -141,12 +141,9 @@ const Skills = () => {
                     }}
                     className="group"
                   >
-                    <div className=" backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/20 hover:border-gray-200/30">
-                      <div className="text-center">
-                        <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                          {skill.icon}
-                        </div>
-                        <h4 className="font-semibold  text-sm md:text-base">
+                    <div className=" backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/20 hover:border-gray-200/30">
+                      <div className="text-center">                        
+                        <h4 className="font-semibold p-3 ">
                           {skill.name}
                         </h4>
                       </div>

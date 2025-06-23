@@ -8,34 +8,46 @@ const experiences = [
     company: 'Softway Finance',
     duration: 'Nov 2023 – Present',
     description: [
-      "Spearheading the development of scalable and secure contactless payment solutions across Africa.",
-      "Collaborating with cross-functional teams to design and implement innovative payment systems.",
-      "Utilizing JavaScript, TypeScript, and C++ to build robust backend services and embedded systems.",
-      "Ensuring compliance with industry standards and regulations in financial technology."
+      "Collaborating with cross-functional teams to design and implement innovative financial systems.",
+      "Developing backend services with Node.js, TypeScript, and Express to handle secure transactions and API communications.",
+      "Writing efficient C++ code for ESP32-based embedded systems powering the hardware layer.",
+      "Implementing tokenization to securely store and transmit payment credentials on NFC cards.",
+      "Integrating AES-256 encryption to ensure confidentiality and integrity of financial data.",
+      "Utilizing I2C and SPI protocols for reliable communication between microcontroller and peripheral devices.",
+      "Ensuring full compliance with PCI-DSS and other financial technology regulations.",
+      "Delivering high-quality software and hardware aligned with global security and performance standards.",
+      "Enhancing user experience through seamless, fast, and intuitive system interactions.",
+      "Designing RESTful APIs for smooth integration with third-party financial and identity services.",
+      "Prototyping, testing, and validating hardware components to guarantee field reliability.",
+      "Ensuring synchronized functionality between hardware and software across the entire system."
     ],
     color: 'from-green-500 to-emerald-600'
   },
   {
     title: 'Frontend Developer (Contract)',
     company: 'Rabah360',
-    duration: 'Aug 2024 – Present',
+    duration: 'Aug 2024 – Feb 2025',
     description: [
-      "Developed responsive and visually appealing user interfaces using HTML5, CSS3, JavaScript, and frameworks like React.js.",
-      "Ensured cross-browser compatibility and mobile responsiveness across various devices and platforms.",
-      "Optimized web applications for performance, improving load times and overall user experience (UX).",
-      "Worked with version control systems like Git and GitHub to maintain code integrity and collaborate with other developers."
+      "Developed responsive and visually appealing user interfaces using React.js and Tailwind CSS.",
+      "Ensured cross-browser compatibility and full mobile responsiveness across various devices and platforms.",
+      "Optimized web application performance, resulting in faster load times and enhanced user experience (UX).",
+      "Collaborated closely with a backend developer to integrate Django-based RESTful APIs.",     
+      "Used Git and GitHub for version control and seamless collaboration within a cross-functional team."
     ],
     color: 'from-blue-500 to-cyan-600'
   },
   {
-    title: 'Software Developer (Freelancer)',
+    title: 'MERN Stack & Mobile App Developer (Freelancer)',
     company: 'Fiverr',
     duration: 'Mar 2023 – Present',
     description: [
-      "Designed, developed, and deployed fully responsive websites and web applications using the MERN stack.",
-      "Implemented front-end interfaces with modern JavaScript frameworks such as React, ensuring optimal user experience and performance.",
-      "Utilized version control systems like Git and GitHub to maintain clean code and manage multiple projects.",
-      "Communicated with clients to gather requirements, provide regular updates, and deliver on-time milestones."
+      "Designed, developed, and deployed fully responsive websites and web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js).",
+      "Built dynamic and high-performance front-end interfaces with React.js and integrated them with scalable backend APIs.",
+      "Developed cross-platform mobile applications using React Native and Expo, ensuring seamless performance on both Android and iOS.",
+      "Integrated Firebase services for authentication, real-time databases, and push notifications in mobile apps.",
+      "Created and connected RESTful APIs using Node.js and Express, with MongoDB as the database layer.",
+      "Used Git and GitHub for version control, efficiently managing multiple client projects and codebases.",
+      "Collaborated with international clients to gather requirements, provide regular updates, and deliver high-quality solutions on time."
     ],
     color: 'from-purple-500 to-pink-600'
   },
@@ -90,10 +102,10 @@ const Experience = () => {
                       <CardTitle className="text-xl md:text-2xl  mb-2">
                         {exp.title}
                       </CardTitle>
-                      <CardDescription className="flex items-center gap-2 text-lg">
+                      <CardDescription className="flex flex-col  gap-2 text-sm">
                         <span className="font-semibold">{exp.company}</span>
-                        <Calendar size={16} className="text-gray-500" />
-                        <span>{exp.duration}</span>
+                        
+                        <span className='flex'><Calendar size={16} className="text-gray-500 pr-1" />{exp.duration}</span>
                       </CardDescription>
                     </div>
                   </div>
