@@ -1,140 +1,165 @@
-'use client';
 
 import { motion } from 'framer-motion';
 import {
-  SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiHtml5, SiCss3,
-  SiTailwindcss, SiFramer, SiNodedotjs, SiExpress, SiMongodb, 
-  SiPostman, SiJsonwebtokens, SiGithub, SiGit, SiNodemon, SiWebpack, SiVite,
-  SiHelm, SiNetlify, SiVercel, SiRender, SiArduino, SiCplusplus, SiJest,
-  SiEslint,
-} from 'react-icons/si';
-import { FaDatabase } from 'react-icons/fa';
-import { TbApi } from 'react-icons/tb';
+  FileType2,
+  Atom,
+  Triangle,  
+  Wind,
+  Film,
+  Server,
+  Braces,
+  Database,
+  KeyRound,
+  Shield,
+  Settings,
+  Cpu,
+  RadioTower,
+  Lock,
+  GitBranch,
+  Github,
+  Package,
+  Zap,
+  Mail,
+  Rocket,
+  Cloud,
+  Globe} from "lucide-react";
+import { PiFileHtml } from 'react-icons/pi';
 
+// Using simple emoji icons instead of react-icons to avoid dependency issues
 const skillCategories = [
   {
     category: 'Frontend Skills',
     skills: [
-      { name: 'JavaScript', icon: <SiJavascript /> },
-      { name: 'TypeScript', icon: <SiTypescript /> },
-      { name: 'React', icon: <SiReact /> },
-      { name: 'Next.js', icon: <SiNextdotjs /> },
-      { name: 'HTML5', icon: <SiHtml5 /> },
-      { name: 'CSS3', icon: <SiCss3 /> },
-      { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
-      { name: 'Framer Motion', icon: <SiFramer /> },
+      { name: 'JavaScript', icon: <FileType2 size={18} /> },     // Generic file icon
+      { name: 'TypeScript', icon: <FileType2 size={18} /> },
+      { name: 'React', icon: <Atom size={18} /> },
+      { name: 'Next.js', icon: <Triangle size={18} /> },
+      { name: 'HTML5', icon: <PiFileHtml size={18} /> },
+      { name: 'CSS3', icon: <Cloud size={18} /> },
+      { name: 'Tailwind CSS', icon: <Wind size={18} /> },
+      { name: 'Framer Motion', icon: <Film size={18} /> },
     ],
+    color: 'from-blue-500 to-cyan-500',
   },
   {
     category: 'Backend Skills',
     skills: [
-      { name: 'Node.js', icon: <SiNodedotjs /> },
-      { name: 'Express', icon: <SiExpress /> },
-      { name: 'MongoDB', icon: <SiMongodb /> },
-      { name: 'Mongoose', icon: <FaDatabase /> },
-      { name: 'REST APIs', icon: <TbApi /> },
-      { name: 'JWT', icon: <SiJsonwebtokens /> },
-      { name: 'OAuth', icon: <SiJsonwebtokens /> },
+      { name: 'Node.js', icon: <Server size={18} /> },
+      { name: 'Express', icon: <Braces size={18} /> },   // represents middleware functions
+      { name: 'MongoDB', icon: <Database size={18} /> },
+      { name: 'Mongoose', icon: <Database size={18} /> },
+      { name: 'REST APIs', icon: <Globe size={18} /> },
+      { name: 'JWT', icon: <KeyRound size={18} /> },
+      { name: 'OAuth', icon: <Shield size={18} /> },
     ],
+    color: 'from-green-500 to-emerald-500',
   },
   {
-    category: 'IoT & Embedded Systems Skills',
+    category: 'IoT & Embedded Systems',
     skills: [
-      { name: 'C++', icon: <SiCplusplus /> },
-      { name: 'Arduino', icon: <SiArduino /> },
-      { name: 'IoT Protocols', icon: <SiArduino /> },
-      { name: 'AES Encryption', icon: <SiJsonwebtokens /> },
+      { name: 'C++', icon: <Settings size={18} /> },
+      { name: 'Arduino', icon: <Cpu size={18} /> },
+      { name: 'IoT Protocols', icon: <RadioTower size={18} /> },
+      { name: 'AES Encryption', icon: <Lock size={18} /> },
     ],
+    color: 'from-purple-500 to-pink-500',
   },
   {
     category: 'Tools & Version Control',
     skills: [
-      { name: 'Git', icon: <SiGit /> },
-      { name: 'GitHub', icon: <SiGithub /> },
-      { name: 'Nodemon', icon: <SiNodemon /> },
-      { name: 'Webpack', icon: <SiWebpack /> },
-      { name: 'Vite', icon: <SiVite /> },
-      { name: 'Postman', icon: <SiPostman /> },
+      { name: 'Git', icon: <GitBranch size={18} /> },
+      { name: 'GitHub', icon: <Github size={18} /> },
+      { name: 'Webpack', icon: <Package size={18} /> },
+      { name: 'Vite', icon: <Zap size={18} /> },
+      { name: 'Postman', icon: <Mail size={18} /> },
     ],
+    color: 'from-orange-500 to-red-500',
   },
   {
-    category: 'Security & Auth',
+    category: 'Deployment & Hosting',
     skills: [
-      { name: 'JSON', icon: <SiJsonwebtokens /> },
-      { name: 'JWT', icon: <SiJsonwebtokens /> },
-      { name: 'OAuth2.0', icon: <SiJsonwebtokens /> },
-      { name: 'Helmet', icon: <SiHelm /> },
+      { name: 'Vercel', icon: <Triangle size={18} /> },   // closest match to ▲
+      { name: 'Render', icon: <Rocket size={18} /> },
+      { name: 'Netlify', icon: <Cloud size={18} /> },
     ],
-  },
-  {
-    category: 'Deployment',
-    skills: [
-      { name: 'Vercel', icon: <SiVercel /> },
-      { name: 'Render', icon: <SiRender /> },
-      { name: 'Netlify', icon: <SiNetlify /> },
-    ],
-  },
-  {
-    category: 'Testing & Quality',
-    skills: [
-      { name: 'Jest', icon: <SiJest /> },
-      { name: 'ESLint', icon: <SiEslint /> },
-    ],
+    color: 'from-indigo-500 to-purple-500',
   },
 ];
 
-const categoryVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.15 } },
-};
 
-const skillVariants = {
-  hidden: { opacity: 0, rotate: -20, y: 30 },
-  visible: { opacity: 1, rotate: 0, y: 0, transition: { type: 'spring', stiffness: 120, damping: 14 } },
-};
-
-export default function Skills() {
+const Skills = () => {
   return (
-    <section id="skills" className="py-20 dark:bg-gray-900">
-      <div className="container mx-auto px-6">       
-
+    <section id="skills" className="py-20 px-4 ">
+      <div className="max-w-7xl mx-auto">
         <motion.div
-          initial="hidden"
-          whileInView="visible"
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="space-y-16"
+          transition={{ duration: 0.6 }}
         >
-          {skillCategories.map(({ category, skills }) => (
-            <motion.div
-              key={category}
-              variants={categoryVariants}
-              className="bg-transperent dark:bg-gray-800 rounded-xl p-6 shadow-lg"
-            >
-              <h3 className="text-2xl font-semibold text-center text-gray-00 dark:text-white mb-8">
-                {category}
-              </h3>
+          <h2 className="text-4xl md:text-5xl font-bold  mb-4">
+            Skills & Technologies
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
+        </motion.div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-items-center">
-                {skills.map(({ name, icon }, index) => (
+        <div className="space-y-16">
+          {skillCategories.map((category, categoryIndex) => (
+            <motion.div
+              key={category.category}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
+              className="relative"
+            >
+              <div className="text-center mb-8">
+                <h3 className="text-2xl md:text-3xl font-bold  mb-4">
+                  {category.category}
+                </h3>
+                <div className={`w-16 h-1 bg-gradient-to-r ${category.color} mx-auto rounded-full`} />
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+                {category.skills.map((skill, skillIndex) => (
                   <motion.div
-                    key={index}
-                    variants={skillVariants}
-                    className="flex flex-col items-center gap-2 bg-gray-500 dark:bg-gray-700 rounded-xl px-4 py-5 shadow-md hover:shadow-xl transition-transform transform hover:scale-110 cursor-pointer"
-                    title={name}
+                    key={skill.name}
+                    initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+                    whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.5,
+                      delay: skillIndex * 0.1,
+                      type: 'spring',
+                      stiffness: 120
+                    }}
+                    whileHover={{ 
+                      scale: 1.1, 
+                      rotate: 5,
+                      transition: { duration: 0.2 }
+                    }}
+                    className="group"
                   >
-                    <div className="text-4xl text-blue-600 dark:text-blue-400">
-                      {icon}
+                    <div className=" backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/20 hover:border-gray-200/30">
+                      <div className="text-center">
+                        <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                          {skill.icon}
+                        </div>
+                        <h4 className="font-semibold  text-sm md:text-base">
+                          {skill.name}
+                        </h4>
+                      </div>
                     </div>
-                    <p className="text-sm font-semibold text-gray-800 dark:text-white text-center">
-                      {name}
-                    </p>
                   </motion.div>
                 ))}
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
-}
+};
+
+export default Skills;
