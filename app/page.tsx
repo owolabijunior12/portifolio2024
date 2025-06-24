@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import { TypeAnimation } from "react-type-animation";
 import { Button } from "@/components/ui/button";
 import { Download, User, FolderOpen } from "lucide-react";
+import BackgroundAnimations from './hero/BackgroundAnimations';
+import WorkspaceDemo from './hero/WorkspaceDemo';
+import FloatingPanels from './hero/FloatingPanels';
 
 export default function Hero() {
   const containerVariants = {
@@ -28,14 +31,16 @@ export default function Hero() {
   return (
     <header
       id="hero"
-      className="min-h-screen px-4 md:px-8  flex flex-col relative justify-center items-center bg-gradient-to-br from-background via-background to-muted/20 overflow-hidden"
+      className="min-h-screen px-4 md:px-8 flex flex-col relative justify-center items-center bg-gradient-to-br from-background via-background to-muted/20 overflow-hidden"
     >
-      {/* Decorative Background Circles */}
-      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/3 rounded-full blur-3xl animate-pulse delay-500"></div>
-      </div>
+      {/* Enhanced Animated Background Elements */}
+      <BackgroundAnimations />
+      
+      {/* Central Human Character Workspace */}
+      <WorkspaceDemo />
+      
+      {/* Floating UI Panels */}
+      <FloatingPanels />
 
       <motion.div
         className="max-w-4xl mx-auto text-center relative z-10"
