@@ -29,12 +29,12 @@ export default function Page() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className=" backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-white/20">
-            <p className="text-lg md:text-xl leading-relaxed ">
+          <div className=" backdrop-blur-sm rounded-2xl py-8 px-2 text-center md:p-12 shadow-xl border border-white/20">
+            <p className="text-sm leading-relaxed ">
               I am a <span className="font-semibold text-blue-600 dark:text-blue-400">results-driven Software Developer</span> with 4 years of experience in building, integrating, and scaling web and mobile applications. Passionate about innovation, I am continuously exploring emerging technologies, with a strong focus on the <span className="font-semibold text-purple-600 dark:text-purple-400">Internet of Things (IoT)</span> to create seamless software-hardware integrations.
             </p>
             <br />
-            <p className="text-lg md:text-xl leading-relaxed ">
+            <p className="text-sm leading-relaxed ">
               With a commitment to excellence and a problem-solving mindset, I thrive in dynamic environments, transforming complex challenges into efficient, impactful solutions. My goal is to leverage technology to drive innovation and deliver scalable, high-performance applications that make a difference.
             </p>
           </div>

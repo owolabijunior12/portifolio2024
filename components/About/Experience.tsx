@@ -67,8 +67,8 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 px-4 ">
-      <div className="max-w-6xl mx-auto">
+    <section id="experience" className="py-20   ">
+      <div className="max-w-7xl mx-au">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -115,7 +115,7 @@ const Experience = () => {
                     {exp.description.map((item, i) => (
                       <motion.li
                         key={i}
-                        className="flex items-start gap-3 "
+                        className="flex text-xs items-start gap-3 "
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.1 + i * 0.1 }}

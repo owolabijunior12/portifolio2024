@@ -53,7 +53,7 @@ const Education = () => {
                       <GraduationCap size={24} />
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-xl md:text-2xl mb-2">
+                      <CardTitle className="text-lg md:text-xl mb-2">
                         {edu.degree}
                       </CardTitle>
                       <CardDescription className="text-lg font-medium   mb-2">
@@ -67,7 +67,7 @@ const Education = () => {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className=" leading-relaxed">
+                  <p className="text-sm leading-relaxed">
                     {edu.description}
                   </p>
                 </CardContent>
