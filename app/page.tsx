@@ -55,13 +55,13 @@ export default function Hero() {
           variants={itemVariants}
           className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent leading-tight"
         >
-          <span className="block text-2xl sm:text-3xl md:text-4xl font-semibold mb-2 text-muted-foreground">
+          <span className="block text-xl sm:text-2xl md:text-4xl font-semibold mb-2 text-muted-foreground">
             Hello, I&apos;m
           </span>
-          Owolabi Destiny
+          Owolabi Destiny Oluwanifemi
           <br />
-          <span className="bg-gradient-to-r from-primary via-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Full Stack Developer & IoT Engineer
+          <span className="bg-gradient-to-r text-2xl from-primary via-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Full Stack Software Developer & IoT || Embedded System Engineer
           </span>
         </motion.h1>
 
