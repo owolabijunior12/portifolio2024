@@ -3,10 +3,25 @@ import { motion } from 'framer-motion';
 import Education from "@/components/About/Educaion";
 import Experience from "@/components/About/Experience";
 import Skills from "@/components/About/Skills";
+import BackgroundAnimations from '@/components/hero/BackgroundAnimations';
+import WorkspaceDemo from '@/components/hero/WorkspaceDemo';
+import FloatingPanels from '@/components/hero/FloatingPanels';
+
+
 
 export default function Page() {
   return (
     <div className="p-4 "> {/* Padding adjusted for smaller screens */}
+     {/* Enhanced Animated Background Elements */}
+          <BackgroundAnimations />
+          
+          {/* Central Human Character Workspace */}
+          <WorkspaceDemo />
+          
+          {/* Floating UI Panels */}
+          <FloatingPanels />
+    
+
  <section id="about" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.div

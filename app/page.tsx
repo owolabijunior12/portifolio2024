@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { TypeAnimation } from "react-type-animation";
 import { Button } from "@/components/ui/button";
 import { Download, User, FolderOpen } from "lucide-react";
-import BackgroundAnimations from './hero/BackgroundAnimations';
-import WorkspaceDemo from './hero/WorkspaceDemo';
-import FloatingPanels from './hero/FloatingPanels';
+import BackgroundAnimations from '@/components/hero/BackgroundAnimations';
+import WorkspaceDemo from '@/components/hero/WorkspaceDemo';
+import FloatingPanels from '@/components/hero/FloatingPanels';
 
 export default function Hero() {
   const containerVariants = {

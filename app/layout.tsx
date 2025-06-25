@@ -11,9 +11,9 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Owolabi Destiny | Full Stack Developer Portfolio",
+  title: "Owolabi Destiny Oluwanifemi | Full Stack Developer Portfolio",
   description:
-    "Explore the portfolio of Owolabi Destiny, a Full Stack Software Engineer specializing in React, Node.js, MongoDB, IoT, and more. Let's build something amazing together.",
+    "Explore the portfolio of Owolabi Destiny Oluwanifemi, a Full Stack Software Engineer specializing in React, Node.js, MongoDB, IoT, and more. Let's build something amazing together.",
   keywords: [
     "Full Stack Developer",
     "React Developer",
@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     "IoT developer Nigeria",
     "Hire payment system developer"
   ],
-  authors: [{ name: "Owolabi Destiny", url: "https://iboytech123.vercel.app" }],
+  authors: [{ name: "Owolabi Destiny Oluwanifemi", url: "https://iboytech123.vercel.app" }],
   creator: "Owolabi Destiny",
   publisher: "Iboytech",
   openGraph: {
-    title: "Owolabi Destiny | Full Stack Developer Portfolio",
+    title: "Owolabi Destiny Oluwanifemi | Full Stack Developer Portfolio",
     description:
-      "Discover professional projects by Owolabi Destiny — a passionate Full Stack Developer with expertise in web, mobile, and IoT solutions.",
+      "Discover professional projects by Owolabi Destiny Oluwanifemi— a passionate Full Stack Developer with expertise in web, mobile, and IoT solutions.",
     url: "https://iboytech123.vercel.app",
     siteName: "Iboytech Portfolio",
     images: [
@@ -117,6 +117,7 @@ export default function RootLayout({
                 "NFC",
                 "Embedded Systems",
                 "Next.js",
+                "Express.js",
                 "TypeScript",
               ],
             }),
