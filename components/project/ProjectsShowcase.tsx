@@ -62,7 +62,7 @@ const projects: Project[] = [
   {
     title: "Drone Delivery Admin Dashboard",
     href: "",
-    dates: "May 2023",
+    dates: "Jan 2025",
     active: true,
     description: "Responsive admin dashboard for drone delivery management, built with Next.js and TailwindCSS. This project features a clean and modern interface for managing drone delivery operations, including tracking deliveries, managing drones, and viewing analytics. The dashboard is designed to be responsive, ensuring optimal performance on both desktop and mobile devices. It includes various components such as charts, tables, and forms to facilitate data visualization and management. The use of TailwindCSS allows for rapid styling and customization, making it easy to adapt the design to specific needs. The dashboard also incorporates Next.js for server-side rendering and improved performance, making it suitable for real-time data updates and interactions.",
     technologies: ["Next.js", "TailwindCSS"],
