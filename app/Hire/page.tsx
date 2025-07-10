@@ -13,8 +13,14 @@ import {
   Globe,
   Lock,
   BadgeCheck,
+  Rocket,
+  Activity,
+  Code2,
+  Users,
+  Zap,
   X
 } from "lucide-react";
+
 
 const testimonials = [
   {
@@ -65,34 +71,68 @@ const testimonials = [
 const reasonsToHire = [
   {
     icon: <BadgeCheck className="text-green-400" />,
-    text: "Proven Full Stack Expertise – I build intuitive React/Next.js frontends and robust Node.js backends that scale."
+    text: "End-to-End Product Builder – I build seamless, scalable frontends with React/Next.js and robust backends with Node.js, MongoDB, and REST/GraphQL APIs.",
   },
   {
     icon: <ShieldCheck className="text-green-400" />,
-    text: "Advanced Security Implementation – From OTP to JWT and biometric authentication, I prioritize encryption and secure protocols."
+    text: "Security-Centric Engineering – I implement secure architectures with OTP, JWT, biometric auth, and encryption that meet real-world security standards.",
   },
   {
     icon: <Cpu className="text-green-400" />,
-    text: "Embedded Systems & IoT – Successfully built AES-encrypted NFC and biometric access systems using ESP32."
+    text: "Embedded & IoT Innovator – From AES-encrypted NFC cards to fingerprint-authenticated access systems, I build reliable low-level solutions using ESP32.",
   },
   {
     icon: <Globe className="text-green-400" />,
-    text: "Versatile Developer – From startup MVPs to enterprise solutions and real-time systems."
+    text: "Versatile Across Domains – Whether it's fintech dashboards, drone control systems, or PWA mobile apps, I adapt fast and deliver real results.",
   },
   {
     icon: <Lock className="text-green-400" />,
-    text: "Reliable Delivery – I’ve shipped production-ready features on time across multiple industries."
+    text: "Consistent, On-Time Delivery – I've shipped production-ready features for startups and enterprises under tight deadlines without compromising quality.",
+  },
+  {
+    icon: <Rocket className="text-green-400" />,
+    text: "Startup-Ready Speed – I execute quickly and efficiently, making me ideal for fast-moving teams that need MVPs and scalable infrastructure on time.",
+  },
+  {
+    icon: <Activity className="text-green-400" />,
+    text: "Real-Time System Expert – I build live apps with WebSockets and MQTT, powering instant user interactions, drone telemetry, and chat systems.",
+  },
+  {
+    icon: <Code2 className="text-green-400" />,
+    text: "Clean & Scalable Codebase – I follow modern coding standards and patterns, writing maintainable, well-tested code your team will love working with.",
+  },
+  {
+    icon: <Users className="text-green-400" />,
+    text: "Team-First Mindset – I collaborate smoothly with designers, backend devs, and product managers, and I always communicate clearly and reliably.",
+  },
+  {
+    icon: <Zap className="text-green-400" />,
+    text: "Engineer & Problem Solver – I don’t just code—I solve business problems with scalable, practical engineering tailored to your product goals.",
   },
 ];
 
+
 const whatICanBuild = [
-  "Secure Authentication Systems (OTP, JWT, MFA, role-based access, email/SMS verification)",
-  "Tap-to-Pay & Tokenization Solutions (NFC-based, AES-encrypted payment systems)",
-  "Biometric & IoT Security Platforms (Authentication using ESP32)",
-  "Real-Time Admin Dashboards (live analytics, status monitoring, permission control)",
-  "Event-Driven Systems (WebSocket-based chat, payments, drone control systems)",
-  "Mobile-First Native Apps & PWAs (React Native with intuitive UX)"
+  " Scalable Authentication Systems – OTP, JWT, multi-factor auth (MFA), role-based access control, and email/SMS verification to protect sensitive user data.",
+  
+  " Contactless Payment Platforms – AES-encrypted NFC tap-to-pay and tokenized payment flows for secure, frictionless financial transactions.",
+  
+  " Biometric & IoT Security Solutions – Fingerprint, facial recognition, and RFID-based access control built on ESP32 for enterprise and embedded use cases.",
+  
+  " Real-Time Admin Dashboards – Custom dashboards with live analytics, user/session tracking, device status monitoring, and admin controls.",
+  
+  " Event-Driven Systems – WebSocket or MQTT-based platforms for real-time messaging, payments, live logistics, or drone coordination.",
+  
+  " Mobile-First Native Apps & PWAs – High-performance mobile applications with React Native, optimized for offline/online sync and intuitive UX.",
+  
+  " RESTful & GraphQL APIs – Clean, versioned APIs built with Express.js or NestJS for seamless frontend-backend communication and third-party integrations.",
+  
+  
+  " Security-Focused Infrastructure – SSL/TLS, AES encryption, secure cookies, rate limiting, and authentication flows hardened against common vulnerabilities.",
+  
+  " Drone & Device Control Panels – Real-time web interfaces for drone fleets, delivery bots, or embedded devices with live telemetry and manual override."
 ];
+
 
 const fadeIn = (delay = 0) => ({
   hidden: { opacity: 0, y: 30 },
