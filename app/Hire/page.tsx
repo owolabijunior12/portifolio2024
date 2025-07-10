@@ -16,33 +16,51 @@ import {
   X
 } from "lucide-react";
 
-// const testimonials = [
-//   {
-//     name: "Lead Engineer, NXDI Technology",
-//     quote:
-//       "Destiny is one of the most reliable developers I’ve worked with. He understands both the technical side and the user perspective.",
-//   },
-//   {
-//     name: "Mentor, Softway Finance",
-//     quote:
-//       "I’ve seen his journey firsthand — from day one to delivering live projects. He has the heart, brain, and hustle of a top-tier dev.",
-//   },
-//   {
-//     name: "IoT Project Partner, Rabah360",
-//     quote:
-//       "He built our secure biometric access system in record time, and the encryption system blew our minds.",
-//   },
-//   {
-//     name: "CTO, SmartSec",
-//     quote:
-//       "His security implementation on embedded systems saved us from a costly vulnerability. Highly dependable!",
-//   },
-//   {
-//     name: "Founder, DevStart Africa",
-//     quote:
-//       "Destiny is not just a coder, he’s a problem solver. Our MVP hit market 2 months early because of him.",
-//   },
-// ];
+const testimonials = [
+  {
+    name: "Audu Joshua Adinoyi",
+    title: "Front-End Developer & AI Model Trainer | React, Next.js, RLHF",
+    quote:
+      "Destiny’s ability to stay calm and focused on projects truly stands out. He’s a dependable and collaborative team member, and one of the first people who comes to mind whenever I need support at work.",
+  },
+  {
+    name: "Erinle Samuel",
+    title: "Frontend Engineer | React.js & React Native",
+    quote:
+      "Destiny is a smart, reliable, and versatile engineer with strong skills in both frontend and backend development. He excels at building secure systems and quickly grasps complex tasks like authentication and payment integration. Beyond his technical abilities, he’s a great communicator and team player who's always ready to support others.",
+  },
+  {
+    name: "Favour Afenikhena",
+    title: "Backend Developer & Web3 Security Researcher | Co-building SoftwayFinance",
+    quote:
+      "I have worked with Destiny and he is quite good. He is easy to relate with and he always keeps to time. He is also very hardworking.",
+  },
+  {
+    name: "Shella Queen.",
+    title: "Skiled slate venture",
+    quote:
+      "Destiny is a highly skilled developer who consistently delivers high-quality work. His expertise in both frontend and backend technologies is impressive, and he has a knack for solving complex problems efficiently. I’ve had the pleasure of collaborating with him on several projects, and his professionalism and dedication always shine through. I highly recommend him for any software development needs.",
+  },
+  {
+    name: "Kebiyise Tayo.",
+    title: "KingAtom Global Consultants",
+    quote:
+      "We worked with Destiny on a complex project and he delivered exceptional results. His attention to detail and problem-solving skills were invaluable. He’s a true professional who goes above and beyond. I highly recommend him for any software development needs. ",
+  },
+  // {
+  //   name: "Lola O.",
+  //   title: "Product Manager at ShopLink",
+  //   quote:
+  //     "Destiny understands both user needs and technical constraints. He played a key role in helping us launch our product on time and with quality.",
+  // },
+  // {
+  //   name: "Yusuf B.",
+  //   title: "Founder of StartupHaven",
+  //   quote:
+  //     "He’s not just a developer—he’s a thinker. Destiny proactively solved issues we hadn’t even considered. I’m already planning the next project with him.",
+  // },
+];
+
 
 const reasonsToHire = [
   {
@@ -144,22 +162,39 @@ export default function HireMePage() {
         </motion.div>
       </div>
 
-      {/* <motion.div className="mb-20 overflow-hidden" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn(0.3)}>
+       <motion.div
+        className="mb-20 overflow-hidden"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn(0.3)}
+      >
         <h2 className="text-2xl font-semibold mb-6">🌟 Testimonials</h2>
         <div className="w-full overflow-hidden">
-          <div className="flex gap-6 animate-scrollTestimonial w-max">
-            {testimonials.map((testimonial, index) => (
+          <motion.div
+            className="flex gap-6 w-max"
+            animate={{ x: ['0%', '-50%'] }}
+            transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+          >
+            {[...testimonials, ...testimonials].map((testimonial, index) => (
               <blockquote
                 key={index}
-                className="w-[300px]  rounded-xl p-6 shadow-md border border-zinc-700 hover:border-blue-500 transition whitespace-normal"
+                className="w-[300px] rounded-xl p-6 shadow-md border border-zinc-700 hover:border-blue-500 transition whitespace-normal bg-zinc-900 text-white"
               >
-                <p className="italic text-sm ">“{testimonial.quote}”</p>
-                <p className="text-sm mt-4 text-blue-400 font-semibold">— {testimonial.name}</p>
+                <p className="italic text-sm leading-relaxed">“{testimonial.quote}”</p>
+                <div className="mt-4">
+                  <p className="text-sm font-semibold text-blue-400">— {testimonial.name}</p>
+                  {testimonial.title && (
+                    <p className="text-xs text-zinc-400 italic mt-1">{testimonial.title}</p>
+                  )}
+                </div>
               </blockquote>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </motion.div> */}
+      </motion.div>
+
+
 
       <motion.div className="text-center border border-lg border-black rounded-xl p-10" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn(0.4)}>
         <h2 className="text-2xl font-bold mb-4 ">📞 Let&apos;s Work Together</h2>
