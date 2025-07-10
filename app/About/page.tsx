@@ -11,7 +11,7 @@ import FloatingPanels from '@/components/hero/FloatingPanels';
 
 export default function Page() {
   return (
-    <div className="p-4 "> {/* Padding adjusted for smaller screens */}
+    <div className="p-4 relative "> {/* Padding adjusted for smaller screens */}
      {/* Enhanced Animated Background Elements */}
           <BackgroundAnimations />
           

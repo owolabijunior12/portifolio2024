@@ -175,7 +175,7 @@ const projects: Project[] = [
         icon: "github",
       },
     ],
-    image: "/stopwatch.png",
+    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2Fstopwatch.png?alt=media&token=2db87b4c-24db-4be4-81ab-9e34248bf6d6",
   },
   {
     title: "Feature Dashboard",
