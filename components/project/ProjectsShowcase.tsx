@@ -36,7 +36,7 @@ const projects: Project[] = [
         icon: "website",
       },
     ],
-    image: "/Rabah360 .png",
+    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2FRabah360%20.png?alt=media&token=1031cb38-07ab-4d36-8376-2b5a55d99ff8",
   },
   {
     title: "Rock Paper Scissor Game",
@@ -57,7 +57,7 @@ const projects: Project[] = [
         icon: "github",
       },
     ],
-    image: "/rps-game-project.png",
+    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2Frps-game-project.png?alt=media&token=40688517-4d89-405c-838c-106597da37e0",
   },
   {
     title: "Drone Delivery Admin Dashboard",
@@ -65,11 +65,11 @@ const projects: Project[] = [
     dates: "Jan 2025",
     active: true,
     description: "Responsive admin dashboard for drone delivery management, built with Next.js and TailwindCSS. This project features a clean and modern interface for managing drone delivery operations, including tracking deliveries, managing drones, and viewing analytics. The dashboard is designed to be responsive, ensuring optimal performance on both desktop and mobile devices. It includes various components such as charts, tables, and forms to facilitate data visualization and management. The use of TailwindCSS allows for rapid styling and customization, making it easy to adapt the design to specific needs. The dashboard also incorporates Next.js for server-side rendering and improved performance, making it suitable for real-time data updates and interactions.",
-    technologies: ["Next.js", "TailwindCSS"],
+    technologies: ["Next.js","Axios", "TailwindCSS"],
     links: [
       
     ],
-    image: "/Iboytech Delivery Drone Dashboard - Google Chrome 2_9_2025 1_49_23 AM.png",
+    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2FIboytech%20Delivery%20Drone%20Dashboard%20-%20Google%20Chrome%202_9_2025%201_49_23%20AM.png?alt=media&token=83a2ea22-15e4-4e3f-a8cb-dbe99b856cca",
   },
   {
     title: "Crypto currency Mobile App",
@@ -80,7 +80,7 @@ const projects: Project[] = [
     technologies: ["React Native", "TailwindCSS", "Expo", "Firebase","OAuth", "Zustand", "Axios", "React Navigation","Supabase"],
     links: [      
     ],
-    image: "/1.png",
+    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2F1.png?alt=media&token=e27b2935-85c4-43f0-8b03-54304c5e6c29",
   },
   {
     title: "Music Web App",
@@ -88,7 +88,7 @@ const projects: Project[] = [
     dates: "Jan 2023",
     active: true,
     description: "Music streaming app with authentication, playlist management, and real-time features. Backend hosted on free service; may take a few minutes to wake up. This project is a full-stack music streaming application that allows users to listen to music, create and manage playlists, and authenticate their accounts. It features a modern user interface built with React.js and TailwindCSS, ensuring a responsive design that works well on both desktop and mobile devices. The backend is built with Node.js and Express.js, utilizing MongoDB for data storage. The app includes user authentication, playlist management, and real-time features using Firebase for notifications and updates.",
-    technologies: ["React.js", "TypeScript", "MongoDB", "TailwindCSS", "Node.js", "Firebase", "Express.js", "JWT", "OAuth"],
+    technologies: ["React.js", "TypeScript", "MongoDB", "TailwindCSS", "Node.js", "Firebase", "Express.js", "JWT","Axios", "OAuth"],
     links: [
       {
         type: "Source",
@@ -96,7 +96,7 @@ const projects: Project[] = [
         icon: "github",
       },
     ],
-    image: "/Iboytech Music App.png",
+    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2FIboytech%20Music%20App.png?alt=media&token=80698f87-7e1a-4aa3-a22a-a59fee107d0d",
   },
   {
     title: "E-Commerce Platform",
@@ -104,7 +104,7 @@ const projects: Project[] = [
     dates: "April 2023",
     active: true,
     description: "Full-stack e-commerce platform with user authentication, payment integration, and responsive design. Backend on free hosting may have initial latency. This project is a comprehensive e-commerce platform that allows users to browse products, manage their accounts, and make purchases. It features user authentication for secure access, payment integration with Paystack for seamless transactions, and a responsive design built with React.js and TailwindCSS. The platform also includes features like product search, cart management, and order history. The backend is built with Node.js and Express.js, utilizing MongoDB for data storage. The app is designed to provide a smooth user experience across both desktop and mobile devices.",
-    technologies: ["React.js", "TailwindCSS", "JWT", "OAuth", "MongoDB", "Framer Motion", "React Toastify", "Express.js", "Paystack", "Firebase", "Node.js"],
+    technologies: ["React.js", "TailwindCSS", "Axios","JWT", "OAuth", "MongoDB", "Framer Motion", "React Toastify", "Express.js", "Paystack", "Firebase", "Node.js"],
     links: [
       {
         type: "Website",
@@ -117,7 +117,7 @@ const projects: Project[] = [
         icon: "github",
       },
     ],
-    image: "/Iboytech Music App - Google Chrome 10_25_2024 10_01_05 AM.png",
+    image:  "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2FIboytech%20Music%20App%20-%20Google%20Chrome%2010_25_2024%2010_01_05%20AM.png?alt=media&token=72c7ad84-b039-47c1-86c1-b4fe155a082b",
   },
   {
     title: "Movie Discovery App",
@@ -125,7 +125,7 @@ const projects: Project[] = [
     dates: "Nov 2024",
     active: true,
     description: "User-friendly platform to discover, track, and manage movies with local storage support and rich metadata. This app allows users to search for movies, view detailed information, and manage their watchlist. It features a clean and modern interface built with Next.js and TailwindCSS, ensuring a responsive design that works well on both desktop and mobile devices. The app utilizes the TMDB API to fetch movie data, providing users with up-to-date information on their favorite films. Local storage is used to save user preferences and watchlists, enhancing the overall user experience." ,
-    technologies: ["Next.js", "TailwindCSS", "TypeScript"],
+    technologies: ["Next.js","Axios", "TailwindCSS", "TypeScript"],
     links: [
       {
         type: "Website",
@@ -138,7 +138,7 @@ const projects: Project[] = [
         icon: "github",
       },
     ],
-    image: "/movieapp ss.png",
+    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2Fmovieapp%20ss.png?alt=media&token=993f7fbe-e48c-4883-af2e-09330927e13c",
   },
   {
     title: "Admin Dashboard",
@@ -159,7 +159,7 @@ const projects: Project[] = [
         icon: "github",
       },
     ],
-    image: "/Admin Dashboard.png",
+    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2FAdmin%20Dashboard.png?alt=media&token=df0e0d57-4cb5-4976-93ff-29261dbe7dfb",
   },
   {
     title: "Stop Watch",
@@ -191,14 +191,14 @@ const projects: Project[] = [
         icon: "github",
       },
     ],
-    image: "/dashboard.png",
+    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2Fdashboard.png?alt=media&token=5edde640-c826-44d7-b53f-8b5e08068c56",
   },
   {
     title: "LAMATA IoT Air Quality Monitoring Sensor",
     dates: "2024",
     active: false,
     description: "IoT traffic management system for Lagos Metropolitan Area Transport Authority using ESP32 and sensors. This project involves the development of an IoT-based traffic management system designed to monitor and manage traffic flow in Lagos, Nigeria. It utilizes the ESP32 microcontroller for real-time data processing and communication. The system integrates various sensors to collect data on traffic density, vehicle speed, and environmental conditions. The collected data is transmitted to a central server for analysis and visualization, enabling traffic authorities to make informed decisions. The project aims to enhance traffic management efficiency, reduce congestion, and improve overall transportation infrastructure in the region.",
-    technologies: ["ESP32", "IoT", "C++", "Sensors"],
+    technologies: ["ESP32", "IoT", "https", "C++", "Sensors"],
     links: [],
     image: "",
   },
@@ -207,7 +207,7 @@ const projects: Project[] = [
     dates: "2025",
     active: false,
     description: "Secure NFC ATM payment system using ESP32, AES encryption, and contactless payments. This project integrates NFC technology with an ATM system to enable secure, contactless transactions. It utilizes AES encryption for data security and is built on the ESP32 platform, allowing for IoT connectivity and real-time transaction processing. The system supports various NFC-enabled cards, providing a convenient and secure payment method for users. The project includes a card reader interface, transaction logging, and user authentication features to ensure secure access and transaction integrity. The NFC ATM Payment System is designed to enhance the user experience by providing a fast, secure, and efficient way to perform transactions without the need for physical contact with the ATM.",
-    technologies: ["ESP32", "NFC", "AES Encryption", "C++","Card Reader", "IoT","Node.js","Express"],
+    technologies: ["ESP32", "NFC", "AES Encryption","Axios","https", "C++","Card Reader", "IoT","Node.js","Express"],
     links: [],
     image: "",
   },

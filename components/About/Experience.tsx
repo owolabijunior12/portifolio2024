@@ -37,6 +37,20 @@ const experiences = [
     color: 'from-blue-500 to-cyan-600'
   },
   {
+    title: 'Software Engineer',
+    company: 'NXDI Technology Solutions LTD',
+    duration: 'Aug 2024 – Jan 2025',
+    description: [
+      "Collaborating with cross-functional teams to design and implement innovative financial systems.",
+      "Developing backend services with Node.js, TypeScript, and Express to handle secure transactions and API communications.",
+      "Integrated Firebase services for authentication, real-time databases, and push notifications in mobile apps.",
+      "Created and connected RESTful APIs using Node.js and Express, with MongoDB as the database layer.",
+      "Used Git and GitHub for version control, efficiently managing multiple client projects and codebases.",
+      "Collaborated with international clients to gather requirements, provide regular updates, and deliver high-quality solutions on time."
+    ],
+    color: 'from-purple-500 to-pink-300'
+  },
+  {
     title: 'MERN Stack & Mobile App Developer (Freelancer)',
     company: 'Fiverr',
     duration: 'Mar 2023 – Present',
