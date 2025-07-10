@@ -16,33 +16,33 @@ import {
   X
 } from "lucide-react";
 
-const testimonials = [
-  {
-    name: "Lead Engineer, NXDI Technology",
-    quote:
-      "Destiny is one of the most reliable developers I’ve worked with. He understands both the technical side and the user perspective.",
-  },
-  {
-    name: "Mentor, Softway Finance",
-    quote:
-      "I’ve seen his journey firsthand — from day one to delivering live projects. He has the heart, brain, and hustle of a top-tier dev.",
-  },
-  {
-    name: "IoT Project Partner, Rabah360",
-    quote:
-      "He built our secure biometric access system in record time, and the encryption system blew our minds.",
-  },
-  {
-    name: "CTO, SmartSec",
-    quote:
-      "His security implementation on embedded systems saved us from a costly vulnerability. Highly dependable!",
-  },
-  {
-    name: "Founder, DevStart Africa",
-    quote:
-      "Destiny is not just a coder, he’s a problem solver. Our MVP hit market 2 months early because of him.",
-  },
-];
+// const testimonials = [
+//   {
+//     name: "Lead Engineer, NXDI Technology",
+//     quote:
+//       "Destiny is one of the most reliable developers I’ve worked with. He understands both the technical side and the user perspective.",
+//   },
+//   {
+//     name: "Mentor, Softway Finance",
+//     quote:
+//       "I’ve seen his journey firsthand — from day one to delivering live projects. He has the heart, brain, and hustle of a top-tier dev.",
+//   },
+//   {
+//     name: "IoT Project Partner, Rabah360",
+//     quote:
+//       "He built our secure biometric access system in record time, and the encryption system blew our minds.",
+//   },
+//   {
+//     name: "CTO, SmartSec",
+//     quote:
+//       "His security implementation on embedded systems saved us from a costly vulnerability. Highly dependable!",
+//   },
+//   {
+//     name: "Founder, DevStart Africa",
+//     quote:
+//       "Destiny is not just a coder, he’s a problem solver. Our MVP hit market 2 months early because of him.",
+//   },
+// ];
 
 const reasonsToHire = [
   {
@@ -144,7 +144,7 @@ export default function HireMePage() {
         </motion.div>
       </div>
 
-      <motion.div className="mb-20 overflow-hidden" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn(0.3)}>
+      {/* <motion.div className="mb-20 overflow-hidden" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn(0.3)}>
         <h2 className="text-2xl font-semibold mb-6">🌟 Testimonials</h2>
         <div className="w-full overflow-hidden">
           <div className="flex gap-6 animate-scrollTestimonial w-max">
@@ -159,7 +159,7 @@ export default function HireMePage() {
             ))}
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
 
       <motion.div className="text-center border border-lg border-black rounded-xl p-10" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn(0.4)}>
         <h2 className="text-2xl font-bold mb-4 ">📞 Let&apos;s Work Together</h2>
