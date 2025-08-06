@@ -27,38 +27,38 @@ const testimonials = [
     name: "Audu Joshua Adinoyi",
     title: "Front-End Developer & AI Model Trainer | React, Next.js, RLHF",
     quote:
-      "Destiny’s ability to stay calm and focused on projects truly stands out. He’s a dependable and collaborative team member, and one of the first people who comes to mind whenever I need support at work.",
+      "Destiny’s ability to stay calm and focused on projects truly stands out. He’s a dependable and collaborative team member, and one of the first people who comes to mind whenever I need support at work.....",
   },
   {
     name: "Erinle Samuel",
     title: "Frontend Engineer | React.js & React Native",
     quote:
-      "Destiny is a smart, reliable, and versatile engineer with strong skills in both frontend and backend development. He excels at building secure systems and quickly grasps complex tasks like authentication and payment integration. Beyond his technical abilities, he’s a great communicator and team player who's always ready to support others.",
+      "Destiny is a smart, reliable, and versatile engineer with strong skills in both frontend and backend development. He excels at building secure systems and quickly grasps complex tasks like authentication and payment integration. Beyond his technical abilities, he’s a great communicator and team player who's always ready to support others........",
   },
   {
     name: "Favour Afenikhena",
     title: "Backend Developer & Web3 Security Researcher | Co-building SoftwayFinance",
     quote:
-      "I have worked with Destiny and he is quite good. He is easy to relate with and he always keeps to time. He is also very hardworking.",
+      "I have worked with Destiny and he is quite good. He is easy to relate with and he always keeps to time. He is also very hardworking.....",
   },
   {
     name: "Shella Queen.",
     title: "Skiled slate venture",
     quote:
-      "Destiny is a highly skilled developer who consistently delivers high-quality work. His expertise in both frontend and backend technologies is impressive, and he has a knack for solving complex problems efficiently. I’ve had the pleasure of collaborating with him on several projects, and his professionalism and dedication always shine through. I highly recommend him for any software development needs.",
+      "Destiny is a highly skilled developer who consistently delivers high-quality work. His expertise in both frontend and backend technologies is impressive, and he has a knack for solving complex problems efficiently. I’ve had the pleasure of collaborating with him on several projects, and his professionalism and dedication always shine through. I highly recommend him for any software development needs.....",
   },
   {
     name: "Kebiyise Tayo.",
     title: "KingAtom Global Consultants",
     quote:
-      "We worked with Destiny on a complex project and he delivered exceptional results. His attention to detail and problem-solving skills were invaluable. He’s a true professional who goes above and beyond. I highly recommend him for any software development needs. ",
+      "We worked with Destiny on a complex project and he delivered exceptional results. His attention to detail and problem-solving skills were invaluable. He’s a true professional who goes above and beyond. I highly recommend him for any software development needs....... ",
   },
-  // {
-  //   name: "Lola O.",
-  //   title: "Product Manager at ShopLink",
-  //   quote:
-  //     "Destiny understands both user needs and technical constraints. He played a key role in helping us launch our product on time and with quality.",
-  // },
+  {
+    name: "Timothy Olusanya",
+    title: "Project Manager @ GitStart | Community (YC S19)",
+    quote:
+      "I had the pleasure of working with Owolabi Destiny and witnessing firsthand his unwavering dedication, growth mindset, and strong work ethic. From the outset, he has consistently demonstrated a desire to improve, taking the initiative to learn, adapt, and elevate both his skills and the outcomes of his work......",
+  },
   // {
   //   name: "Yusuf B.",
   //   title: "Founder of StartupHaven",
