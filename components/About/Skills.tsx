@@ -46,11 +46,20 @@ const skillCategories = [
     skills: [
       { name: 'Node.js', icon: <Server size={18} /> },
       { name: 'Express', icon: <Braces size={18} /> },   // represents middleware functions
-      { name: 'MongoDB', icon: <Database size={18} /> },
-      { name: 'Mongoose', icon: <Database size={18} /> },
+      { name: 'Go', icon: <Database size={18} /> },      
       { name: 'REST APIs', icon: <Globe size={18} /> },
       { name: 'JWT', icon: <KeyRound size={18} /> },
       { name: 'OAuth', icon: <Shield size={18} /> },
+    ],
+    color: 'from-green-500 to-emerald-500',
+  },
+  {
+    category: 'Database',
+    skills: [
+
+      { name: 'MongoDB', icon: <Database size={18} /> },
+      { name: 'Postgres', icon: <Database size={18} /> },
+      { name: 'SQL', icon: <Globe size={18} /> },
     ],
     color: 'from-green-500 to-emerald-500',
   },
@@ -101,7 +110,7 @@ const Skills = () => {
           <h2 className="text-4xl md:text-5xl font-bold  mb-4">
             Skills & Technologies
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
+          {/* <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" /> */}
         </motion.div>
 
         <div className="space-y-16">
@@ -118,7 +127,7 @@ const Skills = () => {
                 <h3 className="text-2xl md:text-3xl font-bold  mb-4">
                   {category.category}
                 </h3>
-                <div className={`w-16 h-1 bg-gradient-to-r ${category.color} mx-auto rounded-full`} />
+                {/* <div className={`w-16 h-1 bg-gradient-to-r ${category.color} mx-auto rounded-full`} /> */}
               </div>
 
               <div className=" flex flex-wrap w-auto justify-center  xl:grid-cols-6 gap-2">

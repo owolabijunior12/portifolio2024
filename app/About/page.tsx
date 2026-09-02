@@ -34,7 +34,7 @@ export default function Page() {
           <h2 className="text-4xl md:text-5xl font-bold  mb-4">
             About Me
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-green mx-auto rounded-full" />
         </motion.div>
 
         <motion.div
@@ -46,7 +46,7 @@ export default function Page() {
         >
           <div className=" backdrop-blur-sm rounded-2xl py-8 px-2 text-center md:p-12 shadow-xl border border-white/20">
             <p className="text-sm leading-relaxed ">
-              I am a <span className="font-semibold text-blue-600 dark:text-blue-400">results-driven Software Developer</span> with 4 years of experience in building, integrating, and scaling web and mobile applications. Passionate about innovation, I am continuously exploring emerging technologies, with a strong focus on the <span className="font-semibold text-purple-600 dark:text-purple-400">Internet of Things (IoT)</span> to create seamless software-hardware integrations.
+              I am a results-driven Software Developer with 4 years of experience in building, integrating, and scaling web and mobile applications. Passionate about innovation, I am continuously exploring emerging technologies, with a strong focus on the Internet of Things (IoT) to create seamless software-hardware integrations.
             </p>
             <br />
             <p className="text-sm leading-relaxed ">

@@ -23,6 +23,58 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "DYI Delivery Drone Mobile App",
+    href: "",
+    dates: " 2026",
+    active: false,
+    description: " Mobile app for tracking cryptocurrency prices, built with React Native and TailwindCSS. This project features a user-friendly interface for viewing real-time cryptocurrency prices, market trends, and historical data. The app allows users to search for specific cryptocurrencies, view detailed information about each coin, and track their favorite currencies. It is designed to be responsive and optimized for mobile devices, ensuring a smooth user experience. The use of React Native enables cross-platform compatibility, allowing the app to run on both iOS and Android devices. The backend is powered by Firebase for real-time data updates and authentication.",
+    technologies: ["React Native", "TailwindCSS", "Expo", "Firebase","OAuth", "Zustand", "Axios", "React Navigation",""],
+    links: [      
+    ],
+    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2F1.png?alt=media&token=e27b2935-85c4-43f0-8b03-54304c5e6c29",
+  },
+  {
+    title: "DYI Delivery Drone ",
+    dates: "2026",
+    active: false,
+    description: "Secure NFC ATM payment system using ESP32, AES encryption, and contactless payments. This project integrates NFC technology with an ATM system to enable secure, contactless transactions. It utilizes AES encryption for data security and is built on the ESP32 platform, allowing for IoT connectivity and real-time transaction processing. The system supports various NFC-enabled cards, providing a convenient and secure payment method for users. The project includes a card reader interface, transaction logging, and user authentication features to ensure secure access and transaction integrity. The NFC ATM Payment System is designed to enhance the user experience by providing a fast, secure, and efficient way to perform transactions without the need for physical contact with the ATM.",
+    technologies: ["ESP32", "NFC", "AES Encryption","Axios","https", "C++","Card Reader", "IoT",],
+    links: [],
+    image: "",
+  },
+  {
+    title: "TSI Films",
+    href: "https://tobzyshotit.com",
+    dates: "Sept 2026",
+    active: true,
+    description: "Simplify Church Operations With Our User-Friendly Software, Designed for Churches of All Sizes. Rabah360 is a comprehensive church management software that streamlines operations, enhances communication, and fosters community engagement.Features include member management, event scheduling, donation tracking, and communication tools, all designed to help churches operate more efficiently and effectively. Rabah360 is built with a focus on user experience, making it easy for church leaders and members to navigate and utilize its features. ",
+    technologies: ['React.js','Tailwind','Typescript'],
+    links: [
+      {
+        type: "Website",
+        href: "https://rabah360.com",
+        icon: "website",
+      },
+    ],
+    image: "",
+  },
+  {
+    title: "Tobzyshotit",
+    href: "https://tobzyshotit.com",
+    dates: "Sept 2025",
+    active: true,
+    description: "Simplify Church Operations With Our User-Friendly Software, Designed for Churches of All Sizes. Rabah360 is a comprehensive church management software that streamlines operations, enhances communication, and fosters community engagement.Features include member management, event scheduling, donation tracking, and communication tools, all designed to help churches operate more efficiently and effectively. Rabah360 is built with a focus on user experience, making it easy for church leaders and members to navigate and utilize its features. ",
+    technologies: ['React.js','Tailwind','Typescript'],
+    links: [
+      {
+        type: "Website",
+        href: "https://tobzyshotit.com",
+        icon: "website",
+      },
+    ],
+    image: "",
+  },
+  {
     title: "Rabah360",
     href: "https://rabah360.com",
     dates: "Sept 2024",
@@ -36,7 +88,7 @@ const projects: Project[] = [
         icon: "website",
       },
     ],
-    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2FRabah360%20.png?alt=media&token=1031cb38-07ab-4d36-8376-2b5a55d99ff8",
+    image: "/Rabah360 .png",
   },
   {
     title: "Rock Paper Scissor Game",
@@ -75,7 +127,7 @@ const projects: Project[] = [
     title: "Crypto currency Mobile App",
     href: "",
     dates: "Mar 2025",
-    active: true,
+    active: false,
     description: " Mobile app for tracking cryptocurrency prices, built with React Native and TailwindCSS. This project features a user-friendly interface for viewing real-time cryptocurrency prices, market trends, and historical data. The app allows users to search for specific cryptocurrencies, view detailed information about each coin, and track their favorite currencies. It is designed to be responsive and optimized for mobile devices, ensuring a smooth user experience. The use of React Native enables cross-platform compatibility, allowing the app to run on both iOS and Android devices. The backend is powered by Firebase for real-time data updates and authentication.",
     technologies: ["React Native", "TailwindCSS", "Expo", "Firebase","OAuth", "Zustand", "Axios", "React Navigation","Supabase"],
     links: [      
@@ -196,7 +248,7 @@ const projects: Project[] = [
   {
     title: "LAMATA IoT Air Quality Monitoring Sensor",
     dates: "2024",
-    active: false,
+    active: true,
     description: "IoT traffic management system for Lagos Metropolitan Area Transport Authority using ESP32 and sensors. This project involves the development of an IoT-based traffic management system designed to monitor and manage traffic flow in Lagos, Nigeria. It utilizes the ESP32 microcontroller for real-time data processing and communication. The system integrates various sensors to collect data on traffic density, vehicle speed, and environmental conditions. The collected data is transmitted to a central server for analysis and visualization, enabling traffic authorities to make informed decisions. The project aims to enhance traffic management efficiency, reduce congestion, and improve overall transportation infrastructure in the region.",
     technologies: ["ESP32", "IoT", "https", "C++", "Sensors"],
     links: [],
@@ -242,7 +294,7 @@ const ProjectsShowcase = () => {
       
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold t mb-4">
             Project Showcase
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

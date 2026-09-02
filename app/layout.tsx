@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "Hire payment system developer"
   ],
   authors: [{ name: "Owolabi Destiny Oluwanifemi", url: "https://iboytech123.vercel.app" }],
-  creator: "Owolabi Destiny",
+  creator: "Owolabi Destiny Oluwanifemi",
   publisher: "Iboytech",
   openGraph: {
     title: "Owolabi Destiny Oluwanifemi | Full Stack Developer Portfolio",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Owolabi Destiny | Full Stack Developer Portfolio",
+    title: "Owolabi Destiny Oluwanifemi| Full Stack Developer Portfolio",
     description:
       "Explore the tech projects and skills of Owolabi Destiny. Let's work together to build great things.",
     creator: "@iboytech123",

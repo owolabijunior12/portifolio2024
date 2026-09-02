@@ -48,12 +48,7 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
       >
-        {/* Welcome Badge */}
-        <motion.div variants={itemVariants} className="mb-4">
-          <span className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
-            👋 Welcome to my portfolio
-          </span>
-        </motion.div>
+       
 
         {/* Main Heading */}
         <motion.h1
@@ -65,7 +60,7 @@ export default function Hero() {
           </span>
           Owolabi Destiny Oluwanifemi
           <br />
-          <span className="bg-gradient-to-r text-2xl from-primary via-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r text-2xl   bg-clip-text text-transparent">
             Full Stack Software Developer & IoT || Embedded System Engineer
           </span>
         </motion.h1>

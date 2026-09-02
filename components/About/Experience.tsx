@@ -82,7 +82,7 @@ const experiences = [
 const Experience = () => {
   return (
     <section id="experience" className="py-20   ">
-      <div className="max-w-7xl mx-au">
+      <div className="max-w-full">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -93,7 +93,7 @@ const Experience = () => {
           <h2 className="text-4xl md:text-5xl font-bold ">
             Work Experience
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
+          {/* <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" /> */}
         </motion.div>
 
         <div className="space-y-8">
@@ -106,12 +106,10 @@ const Experience = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
             >
               <Card className="group hover:shadow-2xl transition-all duration-300 border-0  backdrop-blur-sm overflow-hidden">
-                <div className={`h-1 bg-gradient-to-r ${exp.color}`} />
+                {/* <div className={`h-1 bg-gradient-to-r ${exp.color}`} /> */}
                 <CardHeader className="pb-4">
                   <div className="flex items-start gap-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${exp.color} text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <Building2 size={24} />
-                    </div>
+                    
                     <div className="flex-1">
                       <CardTitle className="text-xl md:text-2xl  mb-2">
                         {exp.title}

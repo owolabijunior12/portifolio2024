@@ -69,46 +69,26 @@ const testimonials = [
 
 
 const reasonsToHire = [
-  {
-    icon: <BadgeCheck className="text-green-400" />,
-    text: "End-to-End Product Builder – I build seamless, scalable frontends with React/Next.js and robust backends with Node.js, MongoDB, and REST/GraphQL APIs.",
-  },
-  {
-    icon: <ShieldCheck className="text-green-400" />,
-    text: "Security-Centric Engineering – I implement secure architectures with OTP, JWT, biometric auth, and encryption that meet real-world security standards.",
-  },
-  {
-    icon: <Cpu className="text-green-400" />,
-    text: "Embedded & IoT Innovator – From AES-encrypted NFC cards to fingerprint-authenticated access systems, I build reliable low-level solutions using ESP32.",
-  },
-  {
-    icon: <Globe className="text-green-400" />,
-    text: "Versatile Across Domains – Whether it's fintech dashboards, drone control systems, or PWA mobile apps, I adapt fast and deliver real results.",
-  },
-  {
-    icon: <Lock className="text-green-400" />,
-    text: "Consistent, On-Time Delivery – I've shipped production-ready features for startups and enterprises under tight deadlines without compromising quality.",
-  },
-  {
-    icon: <Rocket className="text-green-400" />,
-    text: "Startup-Ready Speed – I execute quickly and efficiently, making me ideal for fast-moving teams that need MVPs and scalable infrastructure on time.",
-  },
-  {
-    icon: <Activity className="text-green-400" />,
-    text: "Real-Time System Expert – I build live apps with WebSockets and MQTT, powering instant user interactions, drone telemetry, and chat systems.",
-  },
-  {
-    icon: <Code2 className="text-green-400" />,
-    text: "Clean & Scalable Codebase – I follow modern coding standards and patterns, writing maintainable, well-tested code your team will love working with.",
-  },
-  {
-    icon: <Users className="text-green-400" />,
-    text: "Team-First Mindset – I collaborate smoothly with designers, backend devs, and product managers, and I always communicate clearly and reliably.",
-  },
-  {
-    icon: <Zap className="text-green-400" />,
-    text: "Engineer & Problem Solver – I don’t just code—I solve business problems with scalable, practical engineering tailored to your product goals.",
-  },
+  
+     " End-to-End Product Builder – I build seamless, scalable frontends with React/Next.js and robust backends with Node.js, MongoDB, and REST/GraphQL APIs.",  
+  
+     " Security-Centric Engineering – I implement secure architectures with OTP, JWT, biometric auth, and encryption that meet real-world security standards.",  
+  
+     " Embedded & IoT Innovator – From AES-encrypted NFC cards to fingerprint-authenticated access systems, I build reliable low-level solutions using ESP32.",  
+  
+     " Versatile Across Domains – Whether it's fintech dashboards, drone control systems, or PWA mobile apps, I adapt fast and deliver real results.",  
+  
+     " Consistent, On-Time Delivery – I've shipped production-ready features for startups and enterprises under tight deadlines without compromising quality.",  
+  
+   " Startup-Ready Speed – I execute quickly and efficiently, making me ideal for fast-moving teams that need MVPs and scalable infrastructure on time.",  
+  
+     " Real-Time System Expert – I build live apps with WebSockets and MQTT, powering instant user interactions, drone telemetry, and chat systems.",  
+  
+     " Clean & Scalable Codebase – I follow modern coding standards and patterns, writing maintainable, well-tested code your team will love working with.",  
+  
+  " Team-First Mindset – I collaborate smoothly with designers, backend devs, and product managers, and I always communicate clearly and reliably.",  
+  
+    " Engineer & Problem Solver – I don’t just code—I solve business problems with scalable, practical engineering tailored to your product goals.",  
 ];
 
 
@@ -172,7 +152,7 @@ export default function HireMePage() {
         viewport={{ once: true }}
         variants={fadeIn()}
       >
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 ">🚀 Hire Me</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 "> Hire Me</h1>
         <p className="text-lg  max-w-2xl mx-auto">
           Looking for a developer who brings not only skill but vision, passion, and proven delivery? You&apos;re in the right place.
         </p>
@@ -181,19 +161,17 @@ export default function HireMePage() {
       <div className="grid md:grid-cols-2 gap-12 mb-20">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn(0.1)}>
           <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-            <Sparkles className="text-blue-400" /> Why You Should Hire Me
+             Why You Should Hire Me
           </h2>
-          <ul className="space-y-4">
-            {reasonsToHire.map((item, index) => (
-              <li key={index} className="flex items-start gap-3">
-                {item.icon} {item.text}
-              </li>
+            <ul className="list-disc list-inside space-y-2">
+            {reasonsToHire.map((text, index) => (
+              <li key={index}>{text}</li>
             ))}
           </ul>
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn(0.2)}>
-          <h2 className="text-2xl font-semibold mb-4">🛠️ What I Can Build for You</h2>
+          <h2 className="text-2xl font-semibold mb-4"> What I Can Build for You</h2>
           <ul className="list-disc list-inside space-y-2">
             {whatICanBuild.map((text, index) => (
               <li key={index}>{text}</li>
@@ -209,7 +187,7 @@ export default function HireMePage() {
         viewport={{ once: true }}
         variants={fadeIn(0.3)}
       >
-        <h2 className="text-2xl font-semibold mb-6">🌟 Testimonials</h2>
+        <h2 className="text-2xl font-semibold mb-6"> Testimonials</h2>
         <div className="w-full overflow-hidden">
           <motion.div
             className="flex gap-6 w-max"
@@ -237,7 +215,7 @@ export default function HireMePage() {
 
 
       <motion.div className="text-center border border-lg border-black rounded-xl p-10" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn(0.4)}>
-        <h2 className="text-2xl font-bold mb-4 ">📞 Let&apos;s Work Together</h2>
+        <h2 className="text-2xl font-bold mb-4 "> Let&apos;s Work Together</h2>
         <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
           Whether you&apos;re launching a product, scaling a team, or prototyping something revolutionary — I&apos;m the engineer who can help make it real. My track record spans mission-critical systems and startup MVPs. Let&apos;s build something that lasts.
         </p>
