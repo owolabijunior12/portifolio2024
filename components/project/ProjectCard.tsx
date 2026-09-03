@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Globe, Github, ExternalLink } from "lucide-react";
@@ -39,21 +39,26 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   };
 
   return (
-    <Card className="group h-full relat flex flex-col overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-card/50 backdrop-blur-sm border border-border/50">
+    <Card className="group h-full flex flex-col overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-card/50 backdrop-blur-sm border border-border/50">
       <div className="relative overflow-hidden">
         <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-          <Image
-            src={project.image}
-            // src={`https://images.unsplash.com/${project.image}?w=600&h=400&fit=crop`}
-            alt={project.title}
-            width={600}
-            height={400}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-            onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.src = "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop";
-            }}
-          />
+          {project.image ? (
+            <Image
+              src={project.image}
+              alt={project.title}
+              width={600}
+              height={400}
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop";
+              }}
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+              <span className="text-4xl font-bold text-gray-600"></span>
+            </div>
+          )}
         </div>
         {project.active && (
           <div className="absolute top-3 right-3">
@@ -76,12 +81,12 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       </CardHeader>
 
       <CardContent className="flex-1 space-y-4">
-        <p className="text-sm text-muted-foreground leading-relaxed">
+        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
           {project.description}
         </p>
         
         <div className="flex flex-wrap gap-1.5">
-          {project.technologies.map((tech) => (
+          {project.technologies.slice(0, 6).map((tech) => (
             <Badge
               key={tech}
               variant="secondary"
@@ -90,6 +95,14 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               {tech}
             </Badge>
           ))}
+          {project.technologies.length > 6 && (
+            <Badge
+              variant="secondary"
+              className="text-xs px-2 py-1 bg-secondary/50"
+            >
+              +{project.technologies.length - 6}
+            </Badge>
+          )}
         </div>
       </CardContent>
 

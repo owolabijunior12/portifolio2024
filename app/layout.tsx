@@ -2,12 +2,11 @@
 import "./globals.css";
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/navbar";
-import { Nunito } from '@next/font/google';
-import Head from "next/head";
+import { Nunito } from "next/font/google";
 
 const nunito = Nunito({
-  weight: ['400', '700'],
-  subsets: ['latin'],
+  weight: ["400", "700"],
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -23,11 +22,11 @@ export const metadata: Metadata = {
     "Backend Developer",
     "Owolabi Destiny",
     "Iboytech",
-    "website Developer",
+    "Website Developer",
     "Tech Portfolio",
     "Mobile App Developer",
     "Software Engineer",
-    "Web Developer",    
+    "Web Developer",
     "Software Engineer in Nigeria",
     "NFC Payment System Nigeria",
     "ESP32 NFC Tutorial",
@@ -38,15 +37,23 @@ export const metadata: Metadata = {
     "NFC card authentication",
     "React Native contactless payment",
     "IoT developer Nigeria",
-    "Hire payment system developer"
+    "Hire payment system developer",
   ],
-  authors: [{ name: "Owolabi Destiny Oluwanifemi", url: "https://iboytech123.vercel.app" }],
+
+  authors: [
+    {
+      name: "Owolabi Destiny Oluwanifemi",
+      url: "https://iboytech123.vercel.app",
+    },
+  ],
+
   creator: "Owolabi Destiny Oluwanifemi",
   publisher: "Iboytech",
+
   openGraph: {
     title: "Owolabi Destiny Oluwanifemi | Full Stack Developer Portfolio",
     description:
-      "Discover professional projects by Owolabi Destiny Oluwanifemi— a passionate Full Stack Developer with expertise in web, mobile, and IoT solutions.",
+      "Discover professional projects by Owolabi Destiny Oluwanifemi — a passionate Full Stack Developer with expertise in web, mobile, and IoT solutions.",
     url: "https://iboytech123.vercel.app",
     siteName: "Iboytech Portfolio",
     images: [
@@ -54,27 +61,68 @@ export const metadata: Metadata = {
         url: "https://iboytech123.vercel.app/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Owolabi Destiny Portfolio Screenshot",
+        alt: "Owolabi Destiny Portfolio",
       },
     ],
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Owolabi Destiny Oluwanifemi| Full Stack Developer Portfolio",
+    title: "Owolabi Destiny Oluwanifemi | Full Stack Developer Portfolio",
     description:
       "Explore the tech projects and skills of Owolabi Destiny. Let's work together to build great things.",
     creator: "@iboytech123",
     images: ["https://iboytech123.vercel.app/og-image.png"],
   },
+
   robots: {
     index: true,
     follow: true,
     nocache: false,
   },
+
   alternates: {
     canonical: "https://iboytech123.vercel.app",
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Owolabi Destiny Oluwanifemi",
+  url: "https://iboytech123.vercel.app",
+
+  sameAs: [
+    "https://www.linkedin.com/in/owolabi-destiny-oluwanifemi-231222265",
+    "https://twitter.com/iboytech123",
+  ],
+
+  jobTitle: "Full Stack Software Engineer",
+
+  worksFor: {
+    "@type": "Organization",
+    name: "Iboytech",
+  },
+
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "Portfolio Contact",
+    email: "owolabijunior12@gmail.com",
+    availableLanguage: ["English"],
+  },
+
+  knowsAbout: [
+    "React",
+    "Node.js",
+    "MongoDB",
+    "IoT",
+    "NFC",
+    "Embedded Systems",
+    "Next.js",
+    "Express.js",
+    "TypeScript",
+  ],
 };
 
 export default function RootLayout({
@@ -84,46 +132,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        {/* Structured Data for Google Rich Results */}
+      <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Owolabi Destiny Oluwanifemi",
-              url: "https://iboytech123.vercel.app",
-              sameAs: [
-                "https://www.linkedin.com/in/owolabi-destiny-oluwanifemi-231222265",
-                "https://twitter.com/iboytech123",
-              ],
-              jobTitle: "Full Stack Software Engineer",
-              worksFor: {
-                "@type": "Organization",
-                name: "Iboytech",
-              },
-              contactPoint: {
-                "@type": "ContactPoint",
-                contactType: "Portfolio Contact",
-                email: "owolabijunior12@gmail.com",
-                availableLanguage: ["English"],
-              },
-              knowsAbout: [
-                "React",
-                "Node.js",
-                "MongoDB",
-                "IoT",
-                "NFC",
-                "Embedded Systems",
-                "Next.js",
-                "Express.js",
-                "TypeScript",
-              ],
-            }),
+            __html: JSON.stringify(jsonLd),
           }}
         />
-      </Head>
+      </head>
+
       <body className={nunito.className}>
         <Navbar />
         {children}
