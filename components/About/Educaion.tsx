@@ -1,6 +1,5 @@
  import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { GraduationCap, Calendar, Award, School } from 'lucide-react';
 
 const educations = [
   {

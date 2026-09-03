@@ -1,6 +1,6 @@
  import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Building2, Calendar, ChevronRight, Briefcase, MapPin } from 'lucide-react';
+import { Calendar, ChevronRight, Briefcase } from 'lucide-react';
 
 const experiences = [
   {

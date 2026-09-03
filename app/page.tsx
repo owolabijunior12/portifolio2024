@@ -35,6 +35,35 @@ const fadeIn = (delay = 0) => ({
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay } },
 });
 
+// Types
+interface CustomSelectProps {
+  value: string;
+  onChange: (value: string) => void;
+  options: string[];
+  placeholder: string;
+  icon?: React.ElementType;
+  className?: string;
+}
+
+interface FormData {
+  fullName: string;
+  email: string;
+  category: string;
+  service: string;
+  tier: string;
+  projectTitle: string;
+  description: string;
+  timeline: string;
+  budget: string;
+  preferredContact: string;
+  additionalNotes: string;
+}
+
+interface Service {
+  category: string;
+  services: string[];
+}
+
 // Custom Select Component
 const CustomSelect = ({ 
   value, 
@@ -43,12 +72,12 @@ const CustomSelect = ({
   placeholder, 
   icon: Icon,
   className = ""
-}: any) => {
+}: CustomSelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredOptions = options.filter((opt: any) =>
-    opt.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredOptions = options.filter((option: string) =>
+    option.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const handleSelect = (option: string) => {
@@ -115,7 +144,7 @@ export default function Hero() {
   const [showForm, setShowForm] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     fullName: "",
     email: "",
     category: "",
@@ -130,7 +159,7 @@ export default function Hero() {
   });
 
   // Service data for dropdowns
-  const services = [
+  const services: Service[] = [
     {
       category: "Web Development",
       services: ["Responsive Websites", "Full Stack Web Applications", "E-Commerce Platforms"]
@@ -153,38 +182,43 @@ export default function Hero() {
     }
   ];
 
-  const categories = services.map(s => s.category);
+  const categories = services.map((s: Service) => s.category);
   
-  const getServicesForCategory = (category: string) => {
-    const cat = services.find(s => s.category === category);
+  const getServicesForCategory = (category: string): string[] => {
+    const cat = services.find((s: Service) => s.category === category);
     return cat ? cat.services : [];
   };
 
   const availableServices = formData.category ? getServicesForCategory(formData.category) : [];
   const tiers = ["Basic", "Standard", "Premium"];
 
-  const handleFormChange = (e: any) => {
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev: FormData) => ({ ...prev, [name]: value }));
   };
 
   const handleSelectChange = (name: string, value: string) => {
     if (name === 'category') {
-      setFormData(prev => ({
+      setFormData((prev: FormData) => ({
         ...prev,
         [name]: value,
         service: '',
         tier: ''
       }));
     } else if (name === 'service') {
-      setFormData(prev => ({
+      setFormData((prev: FormData) => ({
         ...prev,
         [name]: value,
         tier: ''
       }));
     } else {
-      setFormData(prev => ({ ...prev, [name]: value }));
+      setFormData((prev: FormData) => ({ ...prev, [name]: value }));
     }
+  };
+
+  const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev: FormData) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -236,7 +270,7 @@ export default function Hero() {
       } else {
         setSubmitStatus('error');
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -287,7 +321,7 @@ export default function Hero() {
           Owolabi Destiny Oluwanifemi
           <br />
           <span className="bg-gradient-to-r text-2xl bg-clip-text text-transparent">
-            Full Stack Software Developer & IoT || Embedded System Engineer
+            Full Stack Software Developer &amp; IoT || Embedded System Engineer
           </span>
         </motion.h1>
 
@@ -444,7 +478,7 @@ export default function Hero() {
                       <div className="text-xs text-gray-400 mt-1">Certifications</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-green">Typescript</div>
+                      <div className="text-2xl font-bold text-green">TypeScript</div>
                       <div className="text-xs text-gray-400 mt-1">Go • JavaScript</div>
                     </div>
                   </div>
@@ -473,9 +507,9 @@ export default function Hero() {
         viewport={{ once: true }} 
         variants={fadeIn(0.6)}
       >
-        <h2 className="text-2xl font-bold mb-3">Let's Work Together</h2>
+        <h2 className="text-2xl font-bold mb-3">Let&apos;s Work Together</h2>
         <p className="text-gray-400 mb-6 max-w-2xl mx-auto text-sm">
-          Whether you're launching a product, scaling a team, or prototyping something revolutionary — I can help make it real.
+          Whether you&apos;re launching a product, scaling a team, or prototyping something revolutionary — I can help make it real.
         </p>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-6">
@@ -486,7 +520,7 @@ export default function Hero() {
             <Mail size={16} /> owolabijunior12@gmail.com
           </a>
           <a
-            href="https://wa.me/2348136652504?text=Hello%20Destiny%2C%20I%20came%20across%20your%20developer%20portfolio%20and%20I'm%20interested%20in%20discussing%20a%20potential%20project."
+            href="https://wa.me/2348136652504?text=Hello%20Destiny%2C%20I%20came%20across%20your%20developer%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20potential%20project."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-blue-400 hover:underline text-sm"
@@ -539,7 +573,7 @@ export default function Hero() {
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bold text-white mb-2">Project Inquiry</h3>
               <div className="w-16 h-0.5 bg-blue-500/50 mx-auto rounded-full" />
-              <p className="text-sm text-gray-400 mt-4">Fill in your details and I'll get back to you within 24 hours</p>
+              <p className="text-sm text-gray-400 mt-4">Fill in your details and I&apos;ll get back to you within 24 hours</p>
             </div>
             
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -677,7 +711,7 @@ export default function Hero() {
                         name="preferredContact"
                         value={option.value}
                         checked={formData.preferredContact === option.value}
-                        onChange={handleFormChange}
+                        onChange={handleRadioChange}
                         className="hidden"
                       />
                       <span className="text-sm font-medium">{option.label}</span>
@@ -706,7 +740,7 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   className="bg-green-500/20 border border-green-500/50 text-green-400 text-sm p-3 rounded-lg text-center"
                 >
-                  ✓ Message sent successfully! I'll get back to you soon.
+                  ✓ Message sent successfully! I&apos;ll get back to you soon.
                 </motion.div>
               )}
               
