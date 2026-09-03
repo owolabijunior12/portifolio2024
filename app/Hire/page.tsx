@@ -7,15 +7,37 @@ import {
   Phone,
   FileText,
   Linkedin,
+  Sparkles,
+  ShieldCheck,
   Cpu,
   Globe,
+  Lock,
+  BadgeCheck,
+  Rocket,
+  Activity,
+  Code2,
   Users,
+  Zap,
   X,
   CheckCircle,
+  DollarSign,
   Clock,
+  Award,
   Briefcase,
+  Layers,
   Server,
+  Database,
+  Cloud,
   Smartphone,
+  Wifi,
+  Settings,
+  Terminal,
+  Layout,
+  Shield,
+  GitBranch,
+  Package,
+  Star,
+  Crown,
   Diamond,
   Send,
   User,
@@ -264,6 +286,30 @@ const fadeIn = (delay = 0) => ({
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay } },
 });
 
+// Types
+interface CustomSelectProps {
+  value: string;
+  onChange: (value: string) => void;
+  options: string[];
+  placeholder: string;
+  icon?: React.ElementType;
+  className?: string;
+}
+
+interface FormData {
+  fullName: string;
+  email: string;
+  category: string;
+  service: string;
+  tier: string;
+  projectTitle: string;
+  description: string;
+  timeline: string;
+  budget: string;
+  preferredContact: string;
+  additionalNotes: string;
+}
+
 // Custom Select Component
 const CustomSelect = ({ 
   value, 
@@ -272,12 +318,12 @@ const CustomSelect = ({
   placeholder, 
   icon: Icon,
   className = ""
-}: any) => {
+}: CustomSelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredOptions = options.filter((opt: any) =>
-    opt.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredOptions = options.filter((option: string) =>
+    option.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const handleSelect = (option: string) => {
@@ -345,11 +391,11 @@ export default function HireMePage() {
   const [currency, setCurrency] = useState<'USD' | 'NGN'>('USD');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     fullName: "",
     email: "",
-    service: "",
     category: "",
+    service: "",
     tier: "",
     projectTitle: "",
     description: "",
@@ -359,42 +405,32 @@ export default function HireMePage() {
     additionalNotes: ""
   });
 
-  // Get unique categories for dropdown
-  const categories = services.map(s => s.category);
+  // Get categories for dropdown
+  const categories = services.map((s) => s.category);
   
-  // Get services based on selected category
-  const getServicesForCategory = (category: string) => {
-    const cat = services.find(s => s.category === category);
-    return cat ? cat.services.map(s => s.name) : [];
+  const getServicesForCategory = (category: string): string[] => {
+    const cat = services.find((s) => s.category === category);
+    return cat ? cat.services.map((s) => s.name) : [];
   };
 
-  // Get tiers for selected service
-  const getTiersForService = (category: string, serviceName: string) => {
-    const cat = services.find(s => s.category === category);
-    if (!cat) return [];
-    const service = cat.services.find(s => s.name === serviceName);
-    return service ? Object.keys(service.tiers) : [];
-  };
-
-  // Available services based on category
   const availableServices = formData.category ? getServicesForCategory(formData.category) : [];
-  
-  // Available tiers based on category and service
-  const availableTiers = formData.category && formData.service 
-    ? getTiersForService(formData.category, formData.service)
-    : [];
+  const tiers = ["Basic", "Standard", "Premium"];
 
   const toggleCurrency = () => {
     setCurrency(prev => prev === 'USD' ? 'NGN' : 'USD');
   };
 
-  const handleFormChange = (e: any) => {
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSelectChange = (name: string, value: string) => {
-    // Reset dependent fields when category or service changes
     if (name === 'category') {
       setFormData(prev => ({
         ...prev,
@@ -413,23 +449,13 @@ export default function HireMePage() {
     }
   };
 
-  const handleServiceSelect = (serviceName: string, tier: string, category: string) => {
-    setFormData({ 
-      ...formData, 
-      service: serviceName,
-      category: category,
-      tier: tier
-    });
-    setShowForm(true);
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('https://formspree.io/f/xkjnzwbv', {
+      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -437,8 +463,8 @@ export default function HireMePage() {
         body: JSON.stringify({
           fullName: formData.fullName,
           email: formData.email,
-          service: formData.service,
           category: formData.category,
+          service: formData.service,
           tier: formData.tier,
           projectTitle: formData.projectTitle,
           description: formData.description,
@@ -455,8 +481,8 @@ export default function HireMePage() {
         setFormData({
           fullName: "",
           email: "",
-          service: "",
           category: "",
+          service: "",
           tier: "",
           projectTitle: "",
           description: "",
@@ -472,7 +498,7 @@ export default function HireMePage() {
       } else {
         setSubmitStatus('error');
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -563,7 +589,7 @@ export default function HireMePage() {
         viewport={{ once: true }}
         variants={fadeIn(0.1)}
       >
-        <h2 className="text-3xl font-bold mb-4 text-center">Services & Pricing</h2>
+        <h2 className="text-3xl font-bold mb-4 text-center">Services &amp; Pricing</h2>
         <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto text-sm">
           Choose from three tiers based on your project needs. Each tier includes consultation and delivery.
         </p>
@@ -627,7 +653,15 @@ export default function HireMePage() {
                               ))}
                             </ul>
                             <button
-                              onClick={() => handleServiceSelect(service.name, tier, category.category)}
+                              onClick={() => {
+                                setFormData({
+                                  ...formData,
+                                  category: category.category,
+                                  service: service.name,
+                                  tier: tier
+                                });
+                                setShowForm(true);
+                              }}
                               className="w-full mt-3 py-1.5 text-xs rounded-lg transition-all duration-300 border border-white/10 hover:bg-white/10"
                             >
                               Select {tier.charAt(0).toUpperCase() + tier.slice(1)}
@@ -689,9 +723,9 @@ export default function HireMePage() {
                 key={index}
                 className="w-[280px] rounded-xl p-5 shadow-md border border-white/10 bg-white/5 backdrop-blur-sm text-white"
               >
-                <p className="italic text-sm leading-relaxed text-gray-300">“{testimonial.quote}”</p>
+                <p className="italic text-sm leading-relaxed text-gray-300">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div className="mt-3">
-                  <p className="text-sm font-semibold text-blue-400">— {testimonial.name}</p>
+                  <p className="text-sm font-semibold text-blue-400">&mdash; {testimonial.name}</p>
                   {testimonial.title && (
                     <p className="text-xs text-gray-400 mt-1">{testimonial.title}</p>
                   )}
@@ -709,9 +743,9 @@ export default function HireMePage() {
         viewport={{ once: true }} 
         variants={fadeIn(0.6)}
       >
-        <h2 className="text-2xl font-bold mb-3">Let's Work Together</h2>
+        <h2 className="text-2xl font-bold mb-3">Let&apos;s Work Together</h2>
         <p className="text-gray-400 mb-6 max-w-2xl mx-auto text-sm">
-          Whether you're launching a product, scaling a team, or prototyping something revolutionary — I can help make it real.
+          Whether you&apos;re launching a product, scaling a team, or prototyping something revolutionary — I can help make it real.
         </p>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-6">
@@ -722,7 +756,7 @@ export default function HireMePage() {
             <Mail size={16} /> owolabijunior12@gmail.com
           </a>
           <a
-            href="https://wa.me/2348136652504?text=Hello%20Destiny%2C%20I%20came%20across%20your%20developer%20portfolio%20and%20I'm%20interested%20in%20discussing%20a%20potential%20project."
+            href="https://wa.me/2348136652504?text=Hello%20Destiny%2C%20I%20came%20across%20your%20developer%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20potential%20project."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-blue-400 hover:underline text-sm"
@@ -775,7 +809,7 @@ export default function HireMePage() {
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bold text-white mb-2">Project Inquiry</h3>
               <div className="w-16 h-0.5 bg-blue-500/50 mx-auto rounded-full" />
-              <p className="text-sm text-gray-400 mt-4">Fill in your details and I'll get back to you within 24 hours</p>
+              <p className="text-sm text-gray-400 mt-4">Fill in your details and I&apos;ll get back to you within 24 hours</p>
             </div>
             
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -827,7 +861,7 @@ export default function HireMePage() {
                 <CustomSelect
                   value={formData.tier}
                   onChange={(val: string) => handleSelectChange('tier', val)}
-                  options={availableTiers.map(t => t.charAt(0).toUpperCase() + t.slice(1))}
+                  options={tiers}
                   placeholder="Select Tier"
                   icon={Diamond}
                 />
@@ -913,7 +947,7 @@ export default function HireMePage() {
                         name="preferredContact"
                         value={option.value}
                         checked={formData.preferredContact === option.value}
-                        onChange={handleFormChange}
+                        onChange={handleRadioChange}
                         className="hidden"
                       />
                       <span className="text-sm font-medium">{option.label}</span>
@@ -942,7 +976,7 @@ export default function HireMePage() {
                   animate={{ opacity: 1, y: 0 }}
                   className="bg-green-500/20 border border-green-500/50 text-green-400 text-sm p-3 rounded-lg text-center"
                 >
-                  ✓ Message sent successfully! I'll get back to you soon.
+                  ✓ Message sent successfully! I&apos;ll get back to you soon.
                 </motion.div>
               )}
               
