@@ -740,7 +740,7 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   className="bg-green-500/20 border border-green-500/50 text-green-400 text-sm p-3 rounded-lg text-center"
                 >
-                  ✓ Message sent successfully! I&apos;ll get back to you soon.
+                   Message sent successfully! I&apos;ll get back to you soon.
                 </motion.div>
               )}
               
@@ -750,7 +750,7 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   className="bg-red-500/20 border border-red-500/50 text-red-400 text-sm p-3 rounded-lg text-center"
                 >
-                  ✗ Something went wrong. Please try again or email me directly.
+                   Something went wrong. Please try again or email me directly.
                 </motion.div>
               )}
               
