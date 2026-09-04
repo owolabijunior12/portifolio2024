@@ -27,45 +27,9 @@ import {
   MessageSquare,
   ChevronDown
 } from "lucide-react";
+import { testimonials } from "../page";
 
-const testimonials = [
-  {
-    name: "Audu Joshua Adinoyi",
-    title: "Front-End Developer & AI Model Trainer",
-    quote:
-      "Destiny's ability to stay calm and focused on projects truly stands out. He's a dependable and collaborative team member.",
-  },
-  {
-    name: "Erinle Samuel",
-    title: "Frontend Engineer | React.js & React Native",
-    quote:
-      "Destiny is a smart, reliable, and versatile engineer with strong skills in both frontend and backend development.",
-  },
-  {
-    name: "Favour Afenikhena",
-    title: "Backend Developer & Web3 Security Researcher",
-    quote:
-      "I have worked with Destiny and he is quite good. He is easy to relate with and he always keeps to time.",
-  },
-  {
-    name: "Shella Queen.",
-    title: "Skiled slate venture",
-    quote:
-      "Destiny is a highly skilled developer who consistently delivers high-quality work.",
-  },
-  {
-    name: "Kebiyise Tayo.",
-    title: "KingAtom Global Consultants",
-    quote:
-      "We worked with Destiny on a complex project and he delivered exceptional results.",
-  },
-  {
-    name: "Timothy Olusanya",
-    title: "Project Manager @ GitStart",
-    quote:
-      "I had the pleasure of working with Owolabi Destiny and witnessing firsthand his unwavering dedication.",
-  },
-];
+ 
 
 // Exchange rate: 1 USD = 1,500 NGN
 const EXCHANGE_RATE = 1500;
@@ -528,7 +492,7 @@ export default function HireMePage() {
       </div>
 
       {/* Currency Toggle */}
-      <motion.div
+      {/* <motion.div
         className="flex justify-center mb-12"
         initial="hidden"
         whileInView="visible"
@@ -557,7 +521,7 @@ export default function HireMePage() {
             <span className="text-sm font-medium">NGN</span>
           </button>
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Services Section */}
       <motion.div
@@ -619,8 +583,8 @@ export default function HireMePage() {
                               </span>
                             </div>
                             <div className="text-lg font-bold" style={{ color: currency === 'USD' ? '#60a5fa' : '#34d399' }}>
-                              {currency === 'USD' ? '$' : '₦'}
-                              {formatCurrency(tierData.priceUSD, currency)}
+                              {/* {currency === 'USD' ? '$' : '₦'} */}
+                              {/* {formatCurrency(tierData.priceUSD, currency)} */}
                             </div>
                             <ul className="mt-3 space-y-1.5">
                               {tierData.features.map((feature: string, i: number) => (
