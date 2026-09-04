@@ -34,7 +34,18 @@ const fadeIn = (delay = 0) => ({
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay } },
 });
- export const testimonials = [
+interface Testimonial {
+  name: string;
+  title?: string;
+  quote: string;
+  rating: number;
+  source?: string;
+  date?: string;
+  relation?: string;
+}
+
+
+ const testimonials: Testimonial[]  = [
   {
     name: "Akinsanya Mobolaji",
     title: "Software Engineer || NFC/Stablecoins | Building tap-to-pay payments",

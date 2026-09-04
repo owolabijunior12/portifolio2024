@@ -28,7 +28,16 @@ import {
   ChevronDown
 } from "lucide-react";
 // import { testimonials } from "../page";
- export const testimonials:any = [
+interface Testimonial {
+  name: string;
+  title?: string;
+  quote: string;
+  rating: number;
+  source?: string;
+  date?: string;
+  relation?: string;
+}
+ const testimonials: Testimonial[]  = [
   {
     name: "Akinsanya Mobolaji",
     title: "Software Engineer || NFC/Stablecoins | Building tap-to-pay payments",
@@ -723,7 +732,7 @@ export default function HireMePage() {
             animate={{ x: ['0%', '-50%'] }}
             transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
           >
-            {[...testimonials, ...testimonials].map((testimonial, index) => (
+            {[...testimonials].map((testimonial, index) => (
               <blockquote
                 key={index}
                 className="w-[280px] rounded-xl p-5 shadow-md border border-white/10 bg-white/5 backdrop-blur-sm text-white"
