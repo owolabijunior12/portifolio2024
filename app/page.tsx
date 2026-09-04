@@ -478,7 +478,7 @@ export default function Hero() {
                       <div className="text-xs text-gray-400 mt-1">Certifications</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-green">TypeScript</div>
+                      <div className="text-xl font-bold text-green">TypeScript</div>
                       <div className="text-xs text-gray-400 mt-1">Go • JavaScript</div>
                     </div>
                   </div>

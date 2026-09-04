@@ -76,7 +76,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           )}
         </div>
 
-        {/* Active Badge */}
+        {/* Active Badge 
         {project.active && (
           <div className="absolute top-3 right-3">
             <Badge
@@ -86,7 +86,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               Active
             </Badge>
           </div>
-        )}
+        )}*/}
       </div>
 
       {/* Header */}
@@ -97,9 +97,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           </CardTitle>
         </div>
 
-        <CardDescription className="text-sm text-muted-foreground">
+        {/* <CardDescription className="text-sm text-muted-foreground">
           {project.dates}
-        </CardDescription>
+        </CardDescription> */}
       </CardHeader>
 
       {/* Content */}

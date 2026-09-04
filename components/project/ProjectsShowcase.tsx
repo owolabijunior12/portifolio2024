@@ -60,7 +60,7 @@ interface Project {
 
     links: [],
 
-    image: "",
+    image: "https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788514989/myportfolio/qjttsg7poqcovor5heo9.png",
   },
 
   {
@@ -97,107 +97,37 @@ interface Project {
 
     links: [],
 
-    image: "",
+    image: "https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788516517/myportfolio/jsf3ibdai9gkupfdhqxe.jpg",
   },
-
-  {
-    title: "IDChain Africa",
-    href: "",
-    dates: "2025",
-    active: true,
-
-    description:
-      "Digital identity and verification platform focused on creating a secure way to manage identity information and verification workflows.",
-
-    myWork: [
-      "Worked on the MVP architecture for the digital identity platform",
-      "Designed backend services and API structures for identity workflows",
-      "Implemented authentication and authorization concepts",
-      "Worked on secure handling of identity-related information",
-      "Designed verification workflows for identity validation",
-      "Structured the application for future integration with external verification services",
-    ],
-
-    technologies: [
-      "React",
-      "Next.js",
-      "Node.js",
-      "Express.js",
-      "TypeScript",
-      "MongoDB",
-      "REST API",
-      "JWT",
-    ],
-
-    links: [],
-
-    image: "",
-  },
-
-  {
-    title: "Campus Assistant",
+   {
+    title: "TSI Films",
     href: "",
     dates: "2026",
-    active: false,
+    active: true,
 
     description:
-      "A student-focused campus platform combining navigation, academic resources, course management, quizzes, performance tracking, and AI-powered study assistance.",
+      "A professional website created for a film and creative media brand, providing a modern platform for presenting the brand, creative work, and services.",
 
     myWork: [
-      "Designed the frontend experience for students and administrators",
-      "Built interfaces for campus building discovery and navigation",
-      "Implemented course, department, and faculty-based academic organization",
-      "Designed course material interfaces for PDFs, notes, and past questions",
-      "Built quiz and CBT interfaces with result tracking",
-      "Designed student performance dashboards",
-      "Implemented interfaces for AI-generated study recommendations",
-      "Built admin interfaces for managing courses, departments, faculties, users, and learning materials",
+      "Designed and developed the website frontend",
+      "Created a modern visual experience suitable for a creative media brand",
+      "Built reusable and responsive React components",
+      "Implemented responsive layouts across desktop, tablet, and mobile",
+      "Structured the website to showcase creative work and services",
+      "Focused on performance, usability, and visual presentation",
     ],
 
     technologies: [
-      "Next.js",
-      "React",
+      "React.js",
       "TypeScript",
       "Tailwind CSS",
-      "PostgreSQL",
-      "Node.js",
-      "REST API",
-      "React Query",
-      "Leaflet",
     ],
 
     links: [],
 
-    image: "",
+    image: "https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788516580/myportfolio/h7roc6plsfqnufdx6fcx.png",
   },
-  
-  {
-    title: "Web3 Developer Website",
-    href: "https://afenikhenamoses.com/",
-    dates: "2025",
-    active: true,
-    description:
-      "A professional personal website built to establish a strong online presence and showcase Eric's profile, work, and services.",
-    myWork: [
-      "Designed and developed the website frontend",
-      "Built responsive layouts for desktop, tablet, and mobile",
-      "Created reusable UI components",
-      "Implemented website navigation and content sections",
-      "Focused on clean user experience and modern visual presentation",
-      "Optimized the website for responsive performance",
-    ],
-    technologies: ["React.js", "TypeScript", "Tailwind CSS"],
-    links: [
-      {
-        type: "Website",
-        href: "https://afenikhenamoses.com/",
-        icon: "website",
-      },
-    ],
-    image: "https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788516493/myportfolio/gtcjzhrvelwpngpx5xtg.png",
-},
-
-  {
+    {
     title: "Rabah360",
     href: "https://rabah360.com",
     dates: "Sept 2024",
@@ -238,6 +168,35 @@ interface Project {
     image:
       "https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788514415/myportfolio/ohcn6xkxqsayedcpcade.png",
   },
+  
+  
+  {
+    title: "Web3 Developer Website",
+    href: "https://afenikhenamoses.com/",
+    dates: "2025",
+    active: true,
+    description:
+      "A professional personal website built to establish a strong online presence and showcase Eric's profile, work, and services.",
+    myWork: [
+      "Designed and developed the website frontend",
+      "Built responsive layouts for desktop, tablet, and mobile",
+      "Created reusable UI components",
+      "Implemented website navigation and content sections",
+      "Focused on clean user experience and modern visual presentation",
+      "Optimized the website for responsive performance",
+    ],
+    technologies: ["React.js", "TypeScript", "Tailwind CSS"],
+    links: [
+      {
+        type: "Website",
+        href: "https://afenikhenamoses.com/",
+        icon: "website",
+      },
+    ],
+    image: "https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788516493/myportfolio/gtcjzhrvelwpngpx5xtg.png",
+},
+
+ 
   
   {
     title: "Tobzyshotit",
@@ -311,6 +270,76 @@ interface Project {
 
     image:
       "https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788514990/myportfolio/bupty21vbi3leeysaaqs.png",
+  },
+    {
+    title: "IDChain Africa",
+    href: "",
+    dates: "2025",
+    active: false,
+
+    description:
+      "Digital identity and verification platform focused on creating a secure way to manage identity information and verification workflows.",
+
+    myWork: [
+      "Worked on the MVP architecture for the digital identity platform",
+      "Designed backend services and API structures for identity workflows",
+      "Implemented authentication and authorization concepts",
+      "Worked on secure handling of identity-related information",
+      "Designed verification workflows for identity validation",
+      "Structured the application for future integration with external verification services",
+    ],
+
+    technologies: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "TypeScript",
+      "MongoDB",
+      "REST API",
+      "JWT",
+    ],
+
+    links: [],
+
+    image: "https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788523731/myportfolio/fabj4vnyhopr6bma5qyx.jpg",
+  },
+
+  {
+    title: "Campus Assistant",
+    href: "",
+    dates: "2026",
+    active: false,
+
+    description:
+      "A student-focused campus platform combining navigation, academic resources, course management, quizzes, performance tracking, and AI-powered study assistance.",
+
+    myWork: [
+      "Designed the frontend experience for students and administrators",
+      "Built interfaces for campus building discovery and navigation",
+      "Implemented course, department, and faculty-based academic organization",
+      "Designed course material interfaces for PDFs, notes, and past questions",
+      "Built quiz and CBT interfaces with result tracking",
+      "Designed student performance dashboards",
+      "Implemented interfaces for AI-generated study recommendations",
+      "Built admin interfaces for managing courses, departments, faculties, users, and learning materials",
+    ],
+
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Node.js",
+      "REST API",
+      "React Query",
+      "Leaflet",
+    ],
+
+    links: [],
+
+    image: "",
   },
 
   {

@@ -1,11 +1,13 @@
  import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calendar, ChevronRight, Briefcase } from 'lucide-react';
+import { Calendar, ChevronRight } from 'lucide-react';
 
 const experiences = [
   {
     title: 'Software Engineer',
     company: 'Softway Finance',
+    companyLogo: 'https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788516514/myportfolio/gunmwxj5hwah4cogm1ic.png', // Add your logo path
     duration: 'Nov 2023 – Present',
     description: [
       "Collaborating with cross-functional teams to design and implement innovative financial systems.",
@@ -23,9 +25,10 @@ const experiences = [
     ],
     badge: 'Current'
   },
-   {
+  {
     title: 'Frontend Developer (Contract)',
     company: 'Assurdly || Quality as a Service',
+    companyLogo: ' https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788516529/myportfolio/wteiuqtzpoktp34mac5v.jpg', // Add your logo path
     duration: 'Jun 2025 – Jul 2025',
     description: [
       "Designed and implemented responsive user interfaces for a loan platform, ensuring seamless user experience.",
@@ -39,6 +42,7 @@ const experiences = [
   {
     title: 'Frontend Developer (Contract)',
     company: 'Rabah360',
+    companyLogo: '/logos/rabah360.png', // Add your logo path
     duration: 'Aug 2024 – Feb 2025',
     description: [
       "Developed responsive and visually appealing user interfaces using React.js and Tailwind CSS.",
@@ -52,6 +56,7 @@ const experiences = [
   {
     title: 'Software Engineer',
     company: 'NXDI Technology Solutions LTD',
+    companyLogo: 'https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788516494/myportfolio/m0p4d0u1iuwywtoh3acw.webp', // Add your logo path
     duration: 'Aug 2024 – Jan 2025',
     description: [
       "Collaborating with cross-functional teams to design and implement innovative financial systems.",
@@ -66,6 +71,7 @@ const experiences = [
   {
     title: 'MERN Stack & Mobile App Developer',
     company: 'Fiverr (Freelance)',
+    companyLogo: 'https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788516533/myportfolio/qrgvris2e3libnh6h3sw.png', // Add your logo path
     duration: 'Mar 2023 – Present',
     description: [
       "Designed, developed, and deployed fully responsive websites and web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js).",
@@ -81,6 +87,7 @@ const experiences = [
   {
     title: 'Web Developer (Intern)',
     company: 'Instaskool Ltd.',
+    companyLogo: 'https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788514230/myportfolio/odfyda0szv5mzdu8fpgi.webp', // Add your logo path
     duration: 'Jan 2023 – Mar 2023',
     description: [
       "Created responsive websites for clients, worked with MERN stack solutions.",
@@ -106,7 +113,7 @@ const Experience = () => {
           <h2 className="text-4xl relative md:text-5xl font-bold mb-4">
             Work Experience
           </h2>
-          <div className="w-24 h-1 bg-white/20 mx-auto rounded-full" />
+          <div className="w-24 h-1  mx-auto rounded-full" />
           <p className="  mt-4 max-w-2xl mx-auto text-sm">
             Professional journey across software development, embedded systems, and fintech
           </p>
@@ -129,9 +136,33 @@ const Experience = () => {
                 <CardHeader className="pb-4">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
                     <div className="flex items-start gap-4">
-                      {/* Icon */}
-                      <div className="flex-shrink-0 w-12 h-12 rounded-xl border border-white/20 bg-white/5 p-2.5 mt-1">
-                        <Briefcase className="w-full h-full text-white/40" />
+                      {/* Company Logo Image */}
+                      <div className="flex-shrink-0 w-14 h-14 rounded-xl border border-white/10 bg-white/5 p- mt-1 flex items-center justify-center overflow-hidden">
+                        {exp.companyLogo ? (
+                          <Image
+                            src={exp.companyLogo}
+                            alt={`${exp.company} logo`}
+                            width={40}
+                            height={40}
+                            className="object-contain w-full h-full"
+                            onError={(e) => {
+                              // Fallback to first letter if image fails to load
+                              const target = e.target as HTMLImageElement;
+                              target.style.display = 'none';
+                              const parent = target.parentElement;
+                              if (parent) {
+                                const fallback = document.createElement('span');
+                                fallback.className = 'text-xl font-bold ';
+                                fallback.textContent = exp.company.charAt(0).toUpperCase();
+                                parent.appendChild(fallback);
+                              }
+                            }}
+                          />
+                        ) : (
+                          <span className="text-xl font-bold ">
+                            {exp.company.charAt(0).toUpperCase()}
+                          </span>
+                        )}
                       </div>
                       
                       <div>
@@ -139,9 +170,9 @@ const Experience = () => {
                           {exp.title}
                         </CardTitle>
                         <CardDescription className="flex flex-wrap items-center gap-3 text-sm mt-1.5">
-                          <span className="font-medium ">{exp.company}</span>
-                          <span className="flex items-center gap-1 text-gray-500">
-                            <Calendar size={14} className="text-gray-500" />
+                          <span className="font-medium  ">{exp.company}</span>
+                          <span className="flex items-center gap-1  ">
+                            <Calendar size={14} className=" " />
                             {exp.duration}
                           </span>
                         </CardDescription>
@@ -149,7 +180,7 @@ const Experience = () => {
                     </div>
                     
                     {/* Badge */}
-                    <span className="flex-shrink-0 text-xs px-3 py-1 border border-white/10 rounded-full text-white/40 bg-white/5">
+                    <span className="flex-shrink-0 text-xs px-3 py-1 border border-white/10 rounded-full  bg-white/5">
                       {exp.badge}
                     </span>
                   </div>
@@ -165,7 +196,7 @@ const Experience = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.05 + i * 0.05 }}
                       >
-                        <ChevronRight size={14} className="text-white/20 mt-0.5 flex-shrink-0" />
+                        <ChevronRight size={14} className="  mt-0.5 flex-shrink-0" />
                         <span>{item}</span>
                       </motion.li>
                     ))}
@@ -189,7 +220,7 @@ const Experience = () => {
             <div className="text-xs   mt-1">Years Experience</div>
           </div>
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/5 hover:border-white/20 transition-all duration-300">
-            <div className="text-2xl font-bold  ">5</div>
+            <div className="text-2xl font-bold  ">6</div>
             <div className="text-xs   mt-1">Companies</div>
           </div>
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/5 hover:border-white/20 transition-all duration-300">
