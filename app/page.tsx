@@ -431,7 +431,7 @@ export default function Hero() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-green/30 via-green/20 to-blue-500/30 rounded-2xl blur-xl opacity-60" />
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10 bg-gradient-to-b from-green/5 to-transparent">
                   <Image
-                    src="/me3.png"
+                    src="https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788514997/myportfolio/agaaeq22nswjezdvhlmi.png"
                     alt="Professional Portrait"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-700"

@@ -46,7 +46,7 @@ export default function Page() {
                 {/* Image Container */}
                 <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10 bg-gradient-to-b from-green/5 to-transparent">
                   <Image
-                    src="/me3.png" // Replace with your image path
+                    src="https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788514997/myportfolio/agaaeq22nswjezdvhlmi.png" // Replace with your image path
                     alt="Professional Portrait"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-700"

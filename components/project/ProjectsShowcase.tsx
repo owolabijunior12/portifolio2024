@@ -15,71 +15,218 @@ interface Project {
   dates: string;
   active: boolean;
   description: string;
+  myWork: string[];
   technologies: string[];
   links: ProjectLink[];
   image: string;
   video?: string;
 }
 
-const projects: Project[] = [
+ const projects: Project[] = [
   {
-    title: "DYI Delivery Drone Mobile App",
+    title: "FlyAje Drone Delivery System",
+    href: "",
+    dates: "2026",
+    active: true,
+
+    description:
+      "End-to-end drone delivery platform combining embedded hardware, real-time telemetry, backend services, and an administrative control system for monitoring and managing autonomous delivery operations.",
+
+    myWork: [
+      "Designed and developed the backend architecture using Node.js, TypeScript, and Express.js",
+      "Built real-time drone telemetry communication using WebSockets",
+      "Integrated GPS and sensor data for live drone monitoring",
+      "Designed MongoDB data models for drones, deliveries, telemetry, and system operations",
+      "Integrated ESP32 hardware with the backend communication layer",
+      "Worked with GPS, IMU, LiDAR, camera, RFID/NFC and communication modules",
+      "Built the drone delivery admin dashboard using Next.js and Tailwind CSS",
+      "Implemented APIs for drone status, delivery tracking, and operational monitoring",
+    ],
+
+    technologies: [
+      "Node.js",
+      "TypeScript",
+      "Express.js",
+      "MongoDB",
+      "WebSockets",
+      "Next.js",
+      "Tailwind CSS",
+      "ESP32",
+      "GPS",
+      "IMU",
+      "LiDAR",
+      "IoT",
+    ],
+
+    links: [],
+
+    image: "",
+  },
+
+  {
+    title: "Softway Finance — NFC Tap-to-Pay System",
+    href: "",
+    dates: "2025",
+    active: true,
+
+    description:
+      "A contactless payment system designed around NFC and IoT hardware, enabling users to perform payments by tapping compatible cards, phones, or custom NFC tags.",
+
+    myWork: [
+      "Designed the NFC payment hardware concept using ESP32 and PN532",
+      "Implemented NFC card and tag communication",
+      "Worked on secure transaction communication between the payment device and backend",
+      "Integrated the hardware payment flow with backend APIs",
+      "Designed the architecture for contactless student and driver payments",
+      "Worked on card authentication and transaction verification",
+      "Implemented encrypted communication concepts for protecting payment data",
+      "Worked across both embedded hardware and software components of the system",
+    ],
+
+    technologies: [
+      "ESP32",
+      "PN532",
+      "NFC",
+      "C++",
+      "Node.js",
+      "Express.js",
+      "REST API",
+      "IoT",
+      "AES Encryption",
+    ],
+
+    links: [],
+
+    image: "",
+  },
+
+  {
+    title: "IDChain Africa",
+    href: "",
+    dates: "2025",
+    active: true,
+
+    description:
+      "Digital identity and verification platform focused on creating a secure way to manage identity information and verification workflows.",
+
+    myWork: [
+      "Worked on the MVP architecture for the digital identity platform",
+      "Designed backend services and API structures for identity workflows",
+      "Implemented authentication and authorization concepts",
+      "Worked on secure handling of identity-related information",
+      "Designed verification workflows for identity validation",
+      "Structured the application for future integration with external verification services",
+    ],
+
+    technologies: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "TypeScript",
+      "MongoDB",
+      "REST API",
+      "JWT",
+    ],
+
+    links: [],
+
+    image: "",
+  },
+
+  {
+    title: "Campus Assistant",
     href: "",
     dates: "2026",
     active: false,
-    description: "Mobile app for tracking cryptocurrency prices, built with React Native and TailwindCSS. This project features a user-friendly interface for viewing real-time cryptocurrency prices, market trends, and historical data.",
-    technologies: ["React Native", "TailwindCSS", "Expo", "Firebase", "OAuth", "Zustand", "Axios", "React Navigation"],
+
+    description:
+      "A student-focused campus platform combining navigation, academic resources, course management, quizzes, performance tracking, and AI-powered study assistance.",
+
+    myWork: [
+      "Designed the frontend experience for students and administrators",
+      "Built interfaces for campus building discovery and navigation",
+      "Implemented course, department, and faculty-based academic organization",
+      "Designed course material interfaces for PDFs, notes, and past questions",
+      "Built quiz and CBT interfaces with result tracking",
+      "Designed student performance dashboards",
+      "Implemented interfaces for AI-generated study recommendations",
+      "Built admin interfaces for managing courses, departments, faculties, users, and learning materials",
+    ],
+
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Node.js",
+      "REST API",
+      "React Query",
+      "Leaflet",
+    ],
+
     links: [],
-    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2F1.png?alt=media&token=e27b2935-85c4-43f0-8b03-54304c5e6c29",
-  },
-  {
-    title: "DYI Delivery Drone System",
-    dates: "2026",
-    active: false,
-    description: "Secure NFC ATM payment system using ESP32, AES encryption, and contactless payments. This project integrates NFC technology with an ATM system to enable secure, contactless transactions.",
-    technologies: ["ESP32", "NFC", "AES Encryption", "Axios", "https", "C++", "Card Reader", "IoT"],
-    links: [],
+
     image: "",
   },
+  
   {
-    title: "TSI Films",
-    href: "https://tobzyshotit.com",
-    dates: "Sept 2026",
+    title: "Web3 Developer Website",
+    href: "https://afenikhenamoses.com/",
+    dates: "2025",
     active: true,
-    description: "Simplify Church Operations With Our User-Friendly Software, Designed for Churches of All Sizes. Rabah360 is a comprehensive church management software that streamlines operations.",
-    technologies: ['React.js', 'Tailwind', 'Typescript'],
+    description:
+      "A professional personal website built to establish a strong online presence and showcase Eric's profile, work, and services.",
+    myWork: [
+      "Designed and developed the website frontend",
+      "Built responsive layouts for desktop, tablet, and mobile",
+      "Created reusable UI components",
+      "Implemented website navigation and content sections",
+      "Focused on clean user experience and modern visual presentation",
+      "Optimized the website for responsive performance",
+    ],
+    technologies: ["React.js", "TypeScript", "Tailwind CSS"],
     links: [
       {
         type: "Website",
-        href: "https://rabah360.com",
+        href: "https://afenikhenamoses.com/",
         icon: "website",
       },
     ],
-    image: "",
-  },
-  {
-    title: "Tobzyshotit",
-    href: "https://tobzyshotit.com",
-    dates: "Sept 2025",
-    active: true,
-    description: "Simplify Church Operations With Our User-Friendly Software, Designed for Churches of All Sizes. Rabah360 is a comprehensive church management software that streamlines operations.",
-    technologies: ['React.js', 'Tailwind', 'Typescript'],
-    links: [
-      {
-        type: "Website",
-        href: "https://tobzyshotit.com",
-        icon: "website",
-      },
-    ],
-    image: "",
-  },
+    image: "https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788516493/myportfolio/gtcjzhrvelwpngpx5xtg.png",
+},
+
   {
     title: "Rabah360",
     href: "https://rabah360.com",
     dates: "Sept 2024",
     active: true,
-    description: "Simplify Church Operations With Our User-Friendly Software, Designed for Churches of All Sizes. Rabah360 is a comprehensive church management software that streamlines operations.",
-    technologies: ["HTML5", "CSS", "JavaScript", 'React.js', 'Django', 'Python', 'PostgreSQL'],
+
+    description:
+      "A comprehensive church management platform designed to simplify church operations through centralized management tools and a modern web interface.",
+
+    myWork: [
+      "Developed the frontend interface for the platform",
+      "Built responsive pages and reusable UI components",
+      "Implemented church management workflows",
+      "Integrated the frontend with backend APIs",
+      "Worked with authentication and application data flows",
+      "Built responsive layouts for different screen sizes",
+      "Worked with PostgreSQL-backed application data",
+      "Helped structure the platform for scalable church operations",
+    ],
+
+    technologies: [
+      "React.js",
+      "JavaScript",
+      "HTML5",
+      "CSS",
+      "Django",
+      "Python",
+      "PostgreSQL",
+    ],
+
     links: [
       {
         type: "Website",
@@ -87,177 +234,154 @@ const projects: Project[] = [
         icon: "website",
       },
     ],
-    image: "/Rabah360 .png",
+
+    image:
+      "https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788514415/myportfolio/ohcn6xkxqsayedcpcade.png",
   },
+  
   {
-    title: "Rock Paper Scissor Game",
-    href: "https://iboytech-game-rps.vercel.app/",
-    dates: "June 2023",
+    title: "Tobzyshotit",
+    href: "https://tobzyshotit.com/",
+    dates: "Sept 2025",
     active: true,
-    description: "Multiplayer 2-Player Rock-Paper-Scissors Game. Backend hosted on free service; may take a few minutes to wake up.",
-    technologies: ["React.js", "CSS", "Socket.io", "Node.js", "Express.js"],
+    description:
+      "A professional photography and creative portfolio website designed to showcase visual work, services, and brand identity through a modern responsive experience.",
+    myWork: [
+      "Designed and developed the responsive website interface",
+      "Built reusable React components",
+      "Created the visual layout and user experience for showcasing photography work",
+      "Implemented responsive designs for desktop, tablet, and mobile",
+      "Structured the portfolio content for a clean visual presentation",
+      "Focused on performance, usability, and responsive experience",
+    ],
+    technologies: ["React.js", "TypeScript", "Tailwind CSS"],
     links: [
       {
         type: "Website",
-        href: "https://iboytech-game-rps.vercel.app/",
+        href: "https://tobzyshotit.com/",
         icon: "website",
       },
-      {
-        type: "Source",
-        href: "https://github.com/owolabijunior12/Rock-papper-scissors-game",
-        icon: "github",
-      },
     ],
-    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2Frps-game-project.png?alt=media&token=40688517-4d89-405c-838c-106597da37e0",
-  },
-  {
-    title: "Drone Delivery Admin Dashboard",
-    href: "",
-    dates: "Jan 2025",
-    active: true,
-    description: "Responsive admin dashboard for drone delivery management, built with Next.js and TailwindCSS.",
-    technologies: ["Next.js", "Axios", "TailwindCSS"],
-    links: [],
-    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2FIboytech%20Delivery%20Drone%20Dashboard%20-%20Google%20Chrome%202_9_2025%201_49_23%20AM.png?alt=media&token=83a2ea22-15e4-4e3f-a8cb-dbe99b856cca",
-  },
-  {
-    title: "Cryptocurrency Mobile App",
-    href: "",
-    dates: "Mar 2025",
-    active: false,
-    description: "Mobile app for tracking cryptocurrency prices, built with React Native and TailwindCSS.",
-    technologies: ["React Native", "TailwindCSS", "Expo", "Firebase", "OAuth", "Zustand", "Axios", "React Navigation", "Supabase"],
-    links: [],
-    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2F1.png?alt=media&token=e27b2935-85c4-43f0-8b03-54304c5e6c29",
-  },
-  {
-    title: "Music Web App",
-    href: "https://iboytech-music-app.vercel.app/",
-    dates: "Jan 2023",
-    active: true,
-    description: "Music streaming app with authentication, playlist management, and real-time features.",
-    technologies: ["React.js", "TypeScript", "MongoDB", "TailwindCSS", "Node.js", "Firebase", "Express.js", "JWT", "Axios", "OAuth"],
-    links: [
-      {
-        type: "Source",
-        href: "https://github.com/owolabijunior12/mern-stack-ecommerce",
-        icon: "github",
-      },
-    ],
-    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2FIboytech%20Music%20App.png?alt=media&token=80698f87-7e1a-4aa3-a22a-a59fee107d0d",
+    image:
+      "https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788516526/myportfolio/duuonur2v10jfaivf3ub.png",
   },
   {
     title: "E-Commerce Platform",
     href: "https://iboytech-e-commerce.vercel.app/",
     dates: "April 2023",
     active: true,
-    description: "Full-stack e-commerce platform with user authentication, payment integration, and responsive design.",
-    technologies: ["React.js", "TailwindCSS", "Axios", "JWT", "OAuth", "MongoDB", "Framer Motion", "React Toastify", "Express.js", "Paystack", "Firebase", "Node.js"],
+
+    description:
+      "A full-stack e-commerce platform with authentication, product management, payment processing, API integration, and responsive user experiences.",
+
+    myWork: [
+      "Developed the frontend using React and Tailwind CSS",
+      "Built backend APIs using Node.js and Express.js",
+      "Implemented user authentication and authorization",
+      "Integrated JWT-based authentication",
+      "Integrated Paystack for online payments",
+      "Designed MongoDB database interactions",
+      "Integrated OAuth authentication",
+      "Implemented API communication using Axios",
+      "Built responsive shopping and checkout experiences",
+      "Added UI animations and user feedback systems",
+    ],
+
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "JWT",
+      "OAuth",
+      "Paystack",
+      "Axios",
+      "Firebase",
+      "Framer Motion",
+    ],
+
     links: [
       {
         type: "Website",
         href: "https://iboytech-e-commerce.vercel.app/",
         icon: "website",
       },
-      {
-        type: "Source",
-        href: "https://github.com/owolabijunior12/mern-stack-ecommerce",
-        icon: "github",
-      },
     ],
-    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2FIboytech%20Music%20App%20-%20Google%20Chrome%2010_25_2024%2010_01_05%20AM.png?alt=media&token=72c7ad84-b039-47c1-86c1-b4fe155a082b",
+
+    image:
+      "https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788514990/myportfolio/bupty21vbi3leeysaaqs.png",
   },
+
   {
-    title: "Movie Discovery App",
-    href: "https://iboytech-movie-app.vercel.app/",
-    dates: "Nov 2024",
-    active: true,
-    description: "User-friendly platform to discover, track, and manage movies with local storage support and rich metadata.",
-    technologies: ["Next.js", "Axios", "TailwindCSS", "TypeScript"],
-    links: [
-      {
-        type: "Website",
-        href: "https://iboytech-movie-app.vercel.app/",
-        icon: "website",
-      },
-      {
-        type: "Source",
-        href: "https://github.com/owolabijunior12/movie-app",
-        icon: "github",
-      },
-    ],
-    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2Fmovieapp%20ss.png?alt=media&token=993f7fbe-e48c-4883-af2e-09330927e13c",
-  },
-  {
-    title: "Admin Dashboard",
-    href: "https://admin-dashboard-wheat-iota.vercel.app/",
-    dates: "May 2023",
-    active: true,
-    description: "Responsive admin dashboard built with React and TailwindCSS.",
-    technologies: ["React.js", "TailwindCSS"],
-    links: [
-      {
-        type: "Website",
-        href: "https://admin-dashboard-wheat-iota.vercel.app/",
-        icon: "website",
-      },
-      {
-        type: "Source",
-        href: "https://github.com/owolabijunior12/Admin-Dashboard",
-        icon: "github",
-      },
-    ],
-    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2FAdmin%20Dashboard.png?alt=media&token=df0e0d57-4cb5-4976-93ff-29261dbe7dfb",
-  },
-  {
-    title: "Stop Watch",
-    href: "https://stopwatch-bay-eight.vercel.app/",
-    dates: "Aug 2023",
-    active: true,
-    description: "Simple stopwatch app built with Vue.js and TailwindCSS.",
-    technologies: ["Vue.js", "TailwindCSS"],
-    links: [
-      {
-        type: "Source",
-        href: "https://github.com/owolabijunior12/stopwatch",
-        icon: "github",
-      },
-    ],
-    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2Fstopwatch.png?alt=media&token=2db87b4c-24db-4be4-81ab-9e34248bf6d6",
-  },
-  {
-    title: "Feature Dashboard",
-    href: "https://dashboard-azure-tau-40.vercel.app",
-    dates: "Dec 2023",
-    active: true,
-    description: "Feature-rich dashboard with Chakra UI, Framer Motion, and TypeScript.",
-    technologies: ["Next.js", "TailwindCSS", "Chakra UI", "Framer Motion", "TypeScript"],
-    links: [
-      {
-        type: "Source",
-        href: "https://github.com/owolabijunior12/Dashboard-",
-        icon: "github",
-      },
-    ],
-    image: "https://firebasestorage.googleapis.com/v0/b/full-stack-music-player-b29d8.appspot.com/o/Images%2Fdashboard.png?alt=media&token=5edde640-c826-44d7-b53f-8b5e08068c56",
-  },
-  {
-    title: "LAMATA IoT Air Quality Monitoring Sensor",
+    title: "LAMATA IoT Air Quality Monitoring System",
+    href: "",
     dates: "2024",
     active: true,
-    description: "IoT traffic management system for Lagos Metropolitan Area Transport Authority using ESP32 and sensors.",
-    technologies: ["ESP32", "IoT", "https", "C++", "Sensors"],
+
+    description:
+      "An IoT-based environmental monitoring system built around ESP32 and sensors for collecting and transmitting air-quality data.",
+
+    myWork: [
+      "Designed the ESP32-based IoT architecture",
+      "Integrated environmental sensors with the microcontroller",
+      "Worked on sensor data collection and processing",
+      "Implemented communication between the IoT device and software systems",
+      "Worked with embedded C++ development",
+      "Designed the system around real-time environmental monitoring",
+      "Worked on transmitting collected sensor data to a backend system",
+    ],
+
+    technologies: [
+      "ESP32",
+      "C++",
+      "IoT",
+      "Sensors",
+      "REST API",
+      "Embedded Systems",
+    ],
+
     links: [],
+
     image: "",
   },
+
   {
-    title: "NFC ATM Payment System",
-    dates: "2025",
+    title: "Cryptocurrency Mobile App",
+    href: "",
+    dates: "Mar 2025",
     active: false,
-    description: "Secure NFC ATM payment system using ESP32, AES encryption, and contactless payments.",
-    technologies: ["ESP32", "NFC", "AES Encryption", "Axios", "https", "C++", "Card Reader", "IoT", "Node.js", "Express"],
+
+    description:
+      "A mobile cryptocurrency application for monitoring cryptocurrency prices, market information, and related financial data.",
+
+    myWork: [
+      "Developed the mobile application using React Native and Expo",
+      "Built responsive mobile interfaces using Tailwind CSS",
+      "Integrated cryptocurrency data APIs",
+      "Implemented API communication using Axios",
+      "Implemented application state management using Zustand",
+      "Worked with Firebase and Supabase services",
+      "Integrated OAuth authentication",
+      "Built navigation flows using React Navigation",
+    ],
+
+    technologies: [
+      "React Native",
+      "Expo",
+      "Tailwind CSS",
+      "Firebase",
+      "Supabase",
+      "OAuth",
+      "Zustand",
+      "Axios",
+      "React Navigation",
+    ],
+
     links: [],
-    image: "",
+
+    image:
+      "https://res.cloudinary.com/dpgfsvmyo/image/upload/v1788514979/myportfolio/ezjtu4xydw3wyzcte1gx.png",
   },
 ];
 
