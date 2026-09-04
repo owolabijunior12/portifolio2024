@@ -330,7 +330,7 @@ const CustomSelect = ({
 
 export default function HireMePage() {
   const [showForm, setShowForm] = useState(false);
-  const [currency, setCurrency] = useState<'USD' | 'NGN'>('USD');
+  // const [currency, setCurrency] = useState<'USD' | 'NGN'>('USD');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [formData, setFormData] = useState<FormData>({
@@ -582,10 +582,7 @@ export default function HireMePage() {
                                 {tier === 'basic' ? 'Starter' : tier === 'standard' ? 'Popular' : 'Enterprise'}
                               </span>
                             </div>
-                            <div className="text-lg font-bold" style={{ color: currency === 'USD' ? '#60a5fa' : '#34d399' }}>
-                              {/* {currency === 'USD' ? '$' : '₦'} */}
-                              {/* {formatCurrency(tierData.priceUSD, currency)} */}
-                            </div>
+                            
                             <ul className="mt-3 space-y-1.5">
                               {tierData.features.map((feature: string, i: number) => (
                                 <li key={i} className="flex items-start gap-1.5 text-xs text-gray-400">
