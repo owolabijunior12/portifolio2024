@@ -28,7 +28,7 @@ import {
   ChevronDown
 } from "lucide-react";
 // import { testimonials } from "../page";
- export const testimonials = [
+ export const testimonials:any = [
   {
     name: "Akinsanya Mobolaji",
     title: "Software Engineer || NFC/Stablecoins | Building tap-to-pay payments",
