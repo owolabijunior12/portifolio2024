@@ -32,7 +32,7 @@ import { testimonials } from "../page";
  
 
 // Exchange rate: 1 USD = 1,500 NGN
-const EXCHANGE_RATE = 1500;
+// const EXCHANGE_RATE = 1500;
 
 // Services with tiered pricing
 const services = [
@@ -160,25 +160,25 @@ const services = [
 ];
 
 // Helper function to format currency
-const formatCurrency = (amount: string, currency: 'USD' | 'NGN') => {
-  if (currency === 'USD') {
-    return `${amount}`;
-  }
+// const formatCurrency = (amount: string, currency: 'USD' | 'NGN') => {
+//   if (currency === 'USD') {
+//     return `${amount}`;
+//   }
   
   // Convert USD to NGN
-  if (amount.includes('/hour')) {
-    const numMatch = amount.match(/([\d,]+)/);
-    if (numMatch) {
-      const num = parseFloat(numMatch[0].replace(/,/g, ''));
-      const converted = Math.round(num * EXCHANGE_RATE);
-      return `${converted.toLocaleString()}/hour`;
-    }
-  }
+//   if (amount.includes('/hour')) {
+//     const numMatch = amount.match(/([\d,]+)/);
+//     if (numMatch) {
+//       const num = parseFloat(numMatch[0].replace(/,/g, ''));
+//       const converted = Math.round(num * EXCHANGE_RATE);
+//       return `${converted.toLocaleString()}/hour`;
+//     }
+//   }
   
-  const num = parseFloat(amount.replace(/,/g, ''));
-  const converted = Math.round(num * EXCHANGE_RATE);
-  return `${converted.toLocaleString()}`;
-};
+//   const num = parseFloat(amount.replace(/,/g, ''));
+//   const converted = Math.round(num * EXCHANGE_RATE);
+//   return `${converted.toLocaleString()}`;
+// };
 
 const getTierColor = (tier: string) => {
   switch(tier) {
@@ -358,9 +358,9 @@ export default function HireMePage() {
   const availableServices = formData.category ? getServicesForCategory(formData.category) : [];
   const tiers = ["Basic", "Standard", "Premium"];
 
-  const toggleCurrency = () => {
-    setCurrency(prev => prev === 'USD' ? 'NGN' : 'USD');
-  };
+  // const toggleCurrency = () => {
+  //   setCurrency(prev => prev === 'USD' ? 'NGN' : 'USD');
+  // };
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
