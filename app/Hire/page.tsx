@@ -27,7 +27,73 @@ import {
   MessageSquare,
   ChevronDown
 } from "lucide-react";
-import { testimonials } from "../page";
+// import { testimonials } from "../page";
+ export const testimonials = [
+  {
+    name: "Akinsanya Mobolaji",
+    title: "Software Engineer || NFC/Stablecoins | Building tap-to-pay payments",
+    quote:
+      "I had the pleasure of working with Owolabi Destiny at Softway Finance, where he made significant contributions to our hardware engineering efforts. He applied his expertise with Arduino and embedded systems to design and implement reliable solutions that strengthened our projects. Destiny is detail-oriented, creative, and always eager to take on challenges. His ability to bridge software and hardware made him a valuable member of the team, and I'm confident he will be an asset to any organization he joins.",
+    rating: 5,
+    source: "LinkedIn",
+    date: "August 20, 2025",
+    relation: "worked with Owolabi Destiny on the same team"
+  },
+  {
+    name: "Timothy Olusanya",
+    title: "Founder @ MyResumeTool | Building an AI-Assisted, Writer-Led Resume Platform | Full-Stack Product Engineer",
+    quote:
+      "I had the pleasure of working with Owolabi Destiny and witnessing firsthand his unwavering dedication, growth mindset, and strong work ethic. From the outset, he has consistently demonstrated a desire to improve, taking the initiative to learn, adapt, and elevate both his skills and the outcomes of his work. What sets him apart is his reliability and eagerness to improve at every opportunity. Whether it's tackling complex problems, refining his technical abilities, or stepping up to support the team, he always brings focus and a positive attitude. His ability to take feedback constructively and apply it quickly makes him an asset in fast-paced and evolving environments. Beyond his technical capabilities, Owolabi is a team player. He's collaborative, thoughtful, and someone you can count on to bring solutions, not just surface-level fixes, but meaningful, lasting contributions. His professional attitude and commitment to excellence consistently raised the bar for those around him. I'm confident that he will continue to grow and thrive in any environment he finds himself in. Any team would be lucky to have someone with his drive, integrity, and potential.",
+    rating: 5,
+    source: "LinkedIn",
+    date: "July 20, 2025",
+    relation: "managed Owolabi Destiny directly"
+  },
+  {
+    name: "Audu Joshua Adinoyi",
+    title: "Software Engineer | Helping Founders Build & Launch Scalable Web & SaaS Systems | React, Next.js | AI Integration",
+    quote:
+      "Destiny's ability to stay calm and focused on projects truly stands out. He's a dependable and collaborative team member, and one of the first people who comes to mind whenever I need support at work.",
+    rating: 5,
+    source: "LinkedIn",
+    date: "June 26, 2025",
+    relation: "worked with Owolabi Destiny on the same team"
+  },
+  {
+    name: "Erinle Samuel",
+    title: "Software Engineer",
+    quote:
+      "Working with Destiny has been a great experience. He's the kind of engineer you can always count on, smart, consistent, and focused. We worked together on several projects, and I was always impressed by how quickly he picks things up and how deeply he understands both frontend and backend systems. Destiny is really solid with React and Node.js, and he's especially good at building secure, well-structured systems. I remember when we were working on a project that involved complex authentication and payment integration, he handled it smoothly and made sure everything was both secure and efficient. What I appreciate most is that he's not just technically sharp, but also easy to work with. He communicates well, shares knowledge, and is always willing to jump in and help others. I recommend him for any role involving software engineering.",
+    rating: 5,
+    source: "LinkedIn",
+    date: "June 25, 2025",
+    relation: "managed Owolabi Destiny directly"
+  },
+  {
+    name: "Favour Afenikhena",
+    title: "Web3 Security Researcher",
+    quote:
+      "I have worked with Destiny and he is quite good. He is easy to relate with and he always keeps to time. He is also very hardworking.",
+    rating: 5,
+    source: "LinkedIn",
+    date: "October 30, 2024",
+    relation: "worked with Owolabi Destiny on the same team"
+  },
+  {
+    name: "Shella Queen",
+    title: "Skiled slate venture",
+    quote:
+      "Destiny is a highly skilled developer who consistently delivers high-quality work. His expertise in both frontend and backend technologies is impressive, and he has a knack for solving complex problems efficiently. I've had the pleasure of collaborating with him on several projects, and his professionalism and dedication always shine through. I highly recommend him for any software development needs.",
+    rating: 5
+  },
+  {
+    name: "Kebiyise Tayo",
+    title: "KingAtom Global Consultants",
+    quote:
+      "We worked with Destiny on a complex project and he delivered exceptional results. His attention to detail and problem-solving skills were invaluable. He's a true professional who goes above and beyond. I highly recommend him for any software development needs.",
+    rating: 5
+  }
+];
 
  
 
